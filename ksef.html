@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wdrożenie i Obsługa KSeF Gdańsk – Krajowy System e-Faktur | Biuro Trzebiatowska</title>
+  <meta name="description" content="Przygotuj swoją firmę na obowiązkowy KSeF (Krajowy System e-Faktur). Pomagamy w nadaniu uprawnień ZAW-FA, doborze oprogramowania i weryfikacji e-faktur w Gdańsku.">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fdf2f8',
+              100: '#fce7f3',
+              200: '#fbcfe8',
+              300: '#f472b6',
+              500: '#c026d3',
+              600: '#a82682',
+              700: '#8e1b6c',
+              800: '#701a53',
+              900: '#4a0e35',
+              950: '#2b061d',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased pb-16 md:pb-0">
+
+  <!-- TOP BAR -->
+  <header class="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center space-x-4 sm:space-x-6 text-[11px] sm:text-xs">
+        <span class="flex items-center gap-1.5">📍 ul. Piastowska 89, Gdańsk Przymorze</span>
+        <span class="hidden md:inline text-slate-500">|</span>
+        <span class="hidden md:inline">⏰ Pn – Pt: 8:00 – 16:00</span>
+      </div>
+      <div class="flex items-center space-x-4 text-[11px] sm:text-xs font-medium">
+        <a href="tel:+48503596811" class="text-amber-400 hover:text-amber-300 transition flex items-center gap-1">📞 +48 503 59 68 11</a>
+        <span class="text-slate-700">|</span>
+        <a href="mailto:kontakt@biurotrzebiatowska.pl" class="hover:text-white transition">✉ kontakt@biurotrzebiatowska.pl</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVBAR -->
+  <nav class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-3.5 flex justify-between items-center">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/img/logo-default.png" alt="Biuro Rachunkowe Trzebiatowska" class="h-10 sm:h-12 w-auto object-contain">
+      </a>
+
+      <!-- MENU DESKTOP -->
+      <div class="hidden lg:flex items-center space-x-7 text-sm font-medium text-slate-700">
+        <a href="index.html" class="nav-link hover:text-brand-600 transition">Strona Główna</a>
+        <a href="o-biurze.html" class="nav-link hover:text-brand-600 transition">O biurze</a>
+        <a href="certyfikaty.html" class="nav-link hover:text-brand-600 transition">Certyfikaty</a>
+        
+        <!-- DROPDOWN OFERTA -->
+        <div class="relative group py-2">
+          <button class="nav-link active text-brand-600 font-semibold flex items-center gap-1">
+            Oferta <span class="text-[10px]">▼</span>
+          </button>
+          <div class="absolute left-0 top-full hidden group-hover:block bg-white border border-slate-200 shadow-xl rounded-xl py-2 w-64 z-50">
+            <a href="ksiegowosc-jdg.html" class="block px-4 py-2 text-xs text-slate-700 hover:bg-brand-50 hover:text-brand-600 font-medium">Księgowość JDG i B2B</a>
+            <a href="pelna-ksiegowosc-spolki.html" class="block px-4 py-2 text-xs text-slate-700 hover:bg-brand-50 hover:text-brand-600 font-medium">Pełna Księgowość (Spółki z o.o.)</a>
+            <a href="kadry-i-place.html" class="block px-4 py-2 text-xs text-slate-700 hover:bg-brand-50 hover:text-brand-600 font-medium">Kadry i Płace</a>
+            <div class="border-t border-slate-100 my-1"></div>
+            <a href="ksef.html" class="block px-4 py-2 text-xs bg-brand-50 text-brand-600 font-bold flex items-center justify-between">
+              Wdrożenie KSeF <span class="text-[9px] bg-brand-600 text-white px-1.5 py-0.5 rounded">Nowość</span>
+            </a>
+            <a href="rejestracja-firmy.html" class="block px-4 py-2 text-xs text-slate-700 hover:bg-brand-50 hover:text-brand-600 font-medium">Zakładanie firmy za 0 zł</a>
+          </div>
+        </div>
+
+        <a href="jak-pracujemy.html" class="nav-link hover:text-brand-600 transition">Jak pracujemy</a>
+        <a href="opinie.html" class="nav-link hover:text-brand-600 transition">Opinie</a>
+        <a href="kontakt.html" class="nav-link hover:text-brand-600 transition">Kontakt</a>
+      </div>
+
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="kontakt.html" class="bg-brand-600 hover:bg-brand-700 text-white text-xs font-semibold px-4 py-2.5 rounded-lg shadow-sm transition">
+          Konsultacja KSeF
+        </a>
+      </div>
+
+      <button id="mobile-menu-btn" class="lg:hidden p-2 text-slate-700 hover:text-brand-600" aria-label="Menu" aria-expanded="false">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
+    </div>
+
+    <!-- MENU MOBILNE -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-2 text-sm">
+      <a href="index.html" class="block py-2 text-slate-700">Strona Główna</a>
+      <a href="o-biurze.html" class="block py-2 text-slate-700">O biurze i doświadczenie</a>
+      <a href="certyfikaty.html" class="block py-2 text-slate-700">Certyfikaty i polisa OC</a>
+      <div class="py-1 pl-3 border-l-2 border-brand-200 space-y-2 text-xs">
+        <p class="font-bold text-slate-400 uppercase tracking-wider text-[10px]">Oferta:</p>
+        <a href="ksiegowosc-jdg.html" class="block py-1 text-slate-700">Księgowość JDG i B2B</a>
+        <a href="pelna-ksiegowosc-spolki.html" class="block py-1 text-slate-700">Pełna Księgowość (Spółki)</a>
+        <a href="kadry-i-place.html" class="block py-1 text-slate-700">Kadry i Płace</a>
+        <a href="ksef.html" class="block py-1 text-brand-600 font-bold">Wdrożenie KSeF</a>
+        <a href="rejestracja-firmy.html" class="block py-1 text-slate-700">Zakładanie firmy za 0 zł</a>
+      </div>
+      <a href="jak-pracujemy.html" class="block py-2 text-slate-700">Jak pracujemy (obieg online)</a>
+      <a href="opinie.html" class="block py-2 text-slate-700">Opinie i referencje</a>
+      <a href="kontakt.html" class="block py-2 text-slate-700">Kontakt i lokalizacja</a>
+    </div>
+  </nav>
+
+  <!-- NAGŁÓWEK PODSTRONY -->
+  <section class="bg-gradient-to-r from-brand-950 via-slate-900 to-slate-950 text-white py-14">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="max-w-2xl">
+        <span class="text-amber-400 text-xs font-bold uppercase tracking-wider">Nowe Obowiązki Przedsiębiorców</span>
+        <h1 class="text-3xl sm:text-4xl font-extrabold mt-2 mb-4 leading-tight">Wdrożenie i Obsługa KSeF w Gdańsku</h1>
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+          Krajowy System e-Faktur rewolucjonizuje obieg dokumentów w Polsce. Przeprowadzimy Twoją firmę przez wszystkie procedury: od uprawnień w US, przez wybór programu, aż po płynną współpracę z biurem.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GŁÓWNA TREŚĆ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-12 gap-12 items-start">
+      
+      <div class="lg:col-span-8 space-y-8 text-sm sm:text-base text-slate-700 leading-relaxed">
+        <div>
+          <h2 class="text-2xl font-bold text-slate-900 mb-4">Czym jest KSeF i dlaczego nie warto czekać na ostatnią chwilę?</h2>
+          <p>
+            Krajowy System e-Faktur to ogólnopolska platforma Ministerstwa Finansów, która całkowicie zastępuje tradycyjne faktury papierowe oraz pliki PDF tzw. <strong>fakturami ustrukturyzowanymi (w formacie XML)</strong>. Faktura staje się ważna w obrocie prawnym dopiero w momencie, gdy zostanie zarejestrowana na serwerach Ministerstwa Finansów i otrzyma unikalny numer KSeF.
+          </p>
+          <p class="mt-3">
+            Oznacza to całkowitą zmianę dotychczasowych przyzwyczajeń biznesowych: procedur fakturowania, dat powstania obowiązku podatkowego oraz sposobu przekazywania dokumentów do księgowości.
+          </p>
+        </div>
+
+        <!-- 4 KROKI WDROŻENIA KSEF Z NASZYM BIUREM -->
+        <div>
+          <h3 class="text-xl font-bold text-slate-900 mb-5">Jak Biuro Trzebiatowska wdraża KSeF w Twojej firmie?</h3>
+          
+          <div class="space-y-4">
+            <div class="p-5 bg-slate-50 border border-slate-200 rounded-2xl flex gap-4">
+              <span class="w-8 h-8 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center shrink-0 text-sm">1</span>
+              <div>
+                <h4 class="font-bold text-slate-900 text-sm mb-1">Nadanie uprawnień i formularz ZAW-FA</h4>
+                <p class="text-xs sm:text-sm text-slate-600">
+                  Pomagamy w złożeniu zawiadomienia ZAW-FA do Urzędu Skarbowego, generowaniu bezpiecznych tokenów uwierzytelniających oraz nadaniu uprawnień naszemu biuru do pobierania faktur zakupowych.
+                </p>
+              </div>
+            </div>
+
+            <div class="p-5 bg-slate-50 border border-slate-200 rounded-2xl flex gap-4">
+              <span class="w-8 h-8 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center shrink-0 text-sm">2</span>
+              <div>
+                <h4 class="font-bold text-slate-900 text-sm mb-1">Dobór oprogramowania do fakturowania</h4>
+                <p class="text-xs sm:text-sm text-slate-600">
+                  Doradzamy w wyborze prostego, bezpłatnego lub komercyjnego programu do wystawiania e-faktur zintegrowanego z KSeF (np. Fakturownia, inFakt, Subiekt, Saldeo), dostosowanego do wielkości Twojej firmy.
+                </p>
+              </div>
+            </div>
+
+            <div class="p-5 bg-slate-50 border border-slate-200 rounded-2xl flex gap-4">
+              <span class="w-8 h-8 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center shrink-0 text-sm">3</span>
+              <div>
+                <h4 class="font-bold text-slate-900 text-sm mb-1">Procedury awaryjne (KSeF offline)</h4>
+                <p class="text-xs sm:text-sm text-slate-600">
+                  Instruujemy, jak postępować w przypadku awarii systemów rządowych lub braku internetu, aby nie zatrzymać sprzedaży i nie narazić się na kary skarbowe.
+                </p>
+              </div>
+            </div>
+
+            <div class="p-5 bg-slate-50 border border-slate-200 rounded-2xl flex gap-4">
+              <span class="w-8 h-8 rounded-full bg-brand-600 text-white font-bold flex items-center justify-center shrink-0 text-sm">4</span>
+              <div>
+                <h4 class="font-bold text-slate-900 text-sm mb-1">Automatyczne księgowanie</h4>
+                <p class="text-xs sm:text-sm text-slate-600">
+                  Jako Twoje biuro rachunkowe bezpośrednio pobieramy faktury z repozytorium KSeF, weryfikujemy ich poprawność merytoryczną i sporządzamy pliki JPK_V7.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6 text-xs sm:text-sm text-slate-800">
+          <h4 class="font-bold text-slate-900 text-base mb-1">💡 Korzyść z wdrożenia KSeF dla Ciebie</h4>
+          <p class="leading-relaxed">
+            Dzięki KSeF faktury Twoich dostawców trafiają do nas automatycznie. Oznacza to definitywny koniec zbierania papierowych dokumentów i pilnowania, czy nie zgubiłeś żadnego paragonu z NIP!
+          </p>
+        </div>
+      </div>
+
+      <!-- PANEL BOCZNY -->
+      <div class="lg:col-span-4 space-y-6">
+        <div class="bg-blue-900 text-white rounded-3xl p-6 sm:p-8 shadow-md">
+          <span class="text-amber-400 text-[11px] font-bold uppercase tracking-wider">Konsultacja KSeF</span>
+          <h3 class="text-xl font-bold mt-1 mb-3">Chcesz sprawdzić gotowość swojej firmy?</h3>
+          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6">
+            Umów się na 30-minutowy audyt gotowości do KSeF. Sprawdzimy Twój obecny system i wskażemy, jakie kroki musisz podjąć przed terminem ustawowym.
+          </p>
+
+          <a href="kontakt.html" class="block w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-center py-3.5 rounded-xl text-xs transition shadow-sm mb-3">
+            Umów audyt KSeF →
+          </a>
+          
+          <a href="tel:+48503596811" class="block w-full border border-slate-700 hover:bg-slate-800 text-white text-center font-semibold py-3 rounded-xl text-xs transition">
+            Zadzwoń: +48 503 59 68 11
+          </a>
+        </div>
+
+        <div class="bg-slate-50 border border-slate-200 p-6 rounded-3xl text-xs text-slate-600 space-y-2">
+          <p class="font-bold text-slate-900 text-sm">Gwarancja ciągłości rozliczeń</p>
+          <p>
+            Dla wszystkich stałych klientów naszego biura obsługa KSeF jest integralną częścią comiesięcznej opieki księgowej – bez dodatkowych, ukrytych opłat za pobieranie faktur.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 text-slate-400 text-xs pt-12 pb-8 border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+      <div>
+        <div class="bg-white p-2 rounded-xl inline-block mb-3">
+          <img src="assets/img/logo-default.png" alt="Biuro Rachunkowe Trzebiatowska" class="h-9 w-auto">
+        </div>
+        <p class="text-slate-400 leading-relaxed mb-4 text-[11px]">
+          Profesjonalne usługi księgowe i kadrowo-płacowe w Gdańsku na Przymorzu. Licencja Ministerstwa Finansów nr 28310. Ubezpieczenie w Lloyd's.
+        </p>
+      </div>
+      <div>
+        <p class="text-white font-semibold mb-3">Nawigacja</p>
+        <ul class="space-y-2 text-[11px]">
+          <li><a href="index.html" class="hover:text-white transition">Strona Główna</a></li>
+          <li><a href="o-biurze.html" class="hover:text-white transition">O biurze</a></li>
+          <li><a href="certyfikaty.html" class="hover:text-white transition">Certyfikaty i polisa OC</a></li>
+          <li><a href="jak-pracujemy.html" class="hover:text-white transition">Jak pracujemy</a></li>
+          <li><a href="opinie.html" class="hover:text-white transition">Referencje</a></li>
+          <li><a href="kontakt.html" class="hover:text-white transition">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-white font-semibold mb-3">Oferta</p>
+        <ul class="space-y-2 text-[11px]">
+          <li><a href="ksiegowosc-jdg.html" class="hover:text-white transition">Księgowość JDG i B2B</a></li>
+          <li><a href="pelna-ksiegowosc-spolki.html" class="hover:text-white transition">Pełna Księgowość (Spółki)</a></li>
+          <li><a href="kadry-i-place.html" class="hover:text-white transition">Kadry i Płace</a></li>
+          <li><a href="ksef.html" class="text-white font-semibold">Wdrożenie KSeF</a></li>
+          <li><a href="rejestracja-firmy.html" class="hover:text-white transition">Zakładanie firmy za 0 zł</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-white font-semibold mb-3">Kontakt</p>
+        <ul class="space-y-2 text-[11px]">
+          <li class="text-slate-300">📍 ul. Piastowska 89, II piętro<br>80-363 Gdańsk Przymorze</li>
+          <li>📞 <a href="tel:+48503596811" class="text-white font-bold hover:underline">+48 503 59 68 11</a></li>
+          <li>✉ <a href="mailto:kontakt@biurotrzebiatowska.pl" class="hover:text-white">kontakt@biurotrzebiatowska.pl</a></li>
+          <li class="pt-2 text-slate-500">NIP: 584 236 21 95</li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 pt-6 border-t border-slate-800 text-[11px] text-center text-slate-500">
+      <p>© 2026 Biuro Rachunkowe Trzebiatowska. Wszelkie prawa zastrzeżone.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

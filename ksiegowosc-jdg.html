@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Księgowość JDG i B2B Gdańsk – Ryczałt, KPiR | Biuro Rachunkowe Trzebiatowska</title>
+  <meta name="description" content="Kompleksowa księgowość dla jednoosobowych działalności (JDG) i kontraktów B2B w Gdańsku. Rozliczamy ryczałt ewidencjonowany, KPiR, VAT i JPK. Wygodne przesyłanie faktur online.">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fdf2f8',
+              100: '#fce7f3',
+              200: '#fbcfe8',
+              300: '#f472b6',
+              500: '#c026d3',
+              600: '#a82682',
+              700: '#8e1b6c',
+              800: '#701a53',
+              900: '#4a0e35',
+              950: '#2b061d',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased pb-16 md:pb-0">
+
+  <!-- TOP BAR -->
+  <header class="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center space-x-4 sm:space-x-6 text-[11px] sm:text-xs">
+        <span class="flex items-center gap-1.5">📍 ul. Piastowska 89, Gdańsk Przymorze</span>
+        <span class="hidden md:inline text-slate-500">|</span>
+        <span class="hidden md:inline">⏰ Pn – Pt: 8:00 – 16:00</span>
+      </div>
+      <div class="flex items-center space-x-4 text-[11px] sm:text-xs font-medium">
+        <a href="tel:+48503596811" class="text-amber-400 hover:text-amber-300 transition flex items-center gap-1">📞 +48 503 59 68 11</a>
+        <span class="text-slate-700">|</span>
+        <a href="mailto:kontakt@biurotrzebiatowska.pl" class="hover:text-white transition">✉ kontakt@biurotrzebiatowska.pl</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVBAR -->
+  <nav class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-3.5 flex justify-between items-center">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/img/logo-default.png" alt="Biuro Rachunkowe Trzebiatowska" class="h-10 sm:h-12 w-auto object-contain">
+      </a>
+
+      <!-- MENU DESKTOP -->
+      <div class="hidden lg:flex items-center space-x-7 text-sm font-medium text-slate-700">
+        <a href="index.html" class="nav-link hover:text-brand-600 transition">Strona Główna</a>
+        <a href="o-biurze.html" class="nav-link hover:text-brand-600 transition">O biurze</a>
+        <a href="certyfikaty.html" class="nav-link hover:text-brand-600 transition">Certyfikaty</a>
+        
+        <!-- DROPDOWN OFERTA -->
+        <div class="relative group py-2">
+          <button class="nav-link active text-brand-600 font-semibold flex items-center gap-1">
+            Oferta <span class="text-[10px]">▼</span>
+          </button>
+          <div class="absolute left-0 top-full hidden group-hover:block bg-white border border-slate-200 shadow-xl rounded-xl py-2 w-64 z-50">
+            <a href="ksiegowosc-jdg.html" class="block px-4 py-2 text-xs bg-brand-50 text-brand-600 font-bold">Księgowość JDG i B2B</a>
+            <a href="pelna-ksiegowosc-spolki.html" class="block px-4 py-2 text-xs text-slate-700 hover:bg-brand-50 hover:text-brand-600 font-medium">Pełna Księgowość (Spółki z o.o.)</a>
+            <a href="kadry-i-place.html" class="block px-4 py-2 text-xs text-slate-700 hover:bg-brand-50 hover:text-brand-600 font-medium">Kadry i Płace</a>
+            <div class="border-t border-slate-100 my-1"></div>
+            <a href="ksef.html" class="block px-4 py-2 text-xs text-brand-800 bg-brand-50/50 hover:bg-brand-100 font-semibold flex items-center justify-between">
+              Wdrożenie KSeF <span class="text-[9px] bg-brand-600 text-white px-1.5 py-0.5 rounded">Nowość</span>
+            </a>
+            <a href="rejestracja-firmy.html" class="block px-4 py-2 text-xs text-slate-700 hover:bg-brand-50 hover:text-brand-600 font-medium">Zakładanie firmy za 0 zł</a>
+          </div>
+        </div>
+
+        <a href="jak-pracujemy.html" class="nav-link hover:text-brand-600 transition">Jak pracujemy</a>
+        <a href="opinie.html" class="nav-link hover:text-brand-600 transition">Opinie</a>
+        <a href="kontakt.html" class="nav-link hover:text-brand-600 transition">Kontakt</a>
+      </div>
+
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="index.html#wycena" class="bg-brand-600 hover:bg-brand-700 text-white text-xs font-semibold px-4 py-2.5 rounded-lg shadow-sm transition">
+          Szybka wycena JDG
+        </a>
+      </div>
+
+      <button id="mobile-menu-btn" class="lg:hidden p-2 text-slate-700 hover:text-brand-600" aria-label="Menu" aria-expanded="false">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
+    </div>
+
+    <!-- MENU MOBILNE -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-2 text-sm">
+      <a href="index.html" class="block py-2 text-slate-700">Strona Główna</a>
+      <a href="o-biurze.html" class="block py-2 text-slate-700">O biurze i doświadczenie</a>
+      <a href="certyfikaty.html" class="block py-2 text-slate-700">Certyfikaty i polisa OC</a>
+      <div class="py-1 pl-3 border-l-2 border-brand-200 space-y-2 text-xs">
+        <p class="font-bold text-slate-400 uppercase tracking-wider text-[10px]">Oferta:</p>
+        <a href="ksiegowosc-jdg.html" class="block py-1 text-brand-600 font-bold">Księgowość JDG i B2B</a>
+        <a href="pelna-ksiegowosc-spolki.html" class="block py-1 text-slate-700">Pełna Księgowość (Spółki)</a>
+        <a href="kadry-i-place.html" class="block py-1 text-slate-700">Kadry i Płace</a>
+        <a href="ksef.html" class="block py-1 text-brand-600 font-semibold">Wdrożenie KSeF</a>
+        <a href="rejestracja-firmy.html" class="block py-1 text-slate-700">Zakładanie firmy za 0 zł</a>
+      </div>
+      <a href="jak-pracujemy.html" class="block py-2 text-slate-700">Jak pracujemy (obieg online)</a>
+      <a href="opinie.html" class="block py-2 text-slate-700">Opinie i referencje</a>
+      <a href="kontakt.html" class="block py-2 text-slate-700">Kontakt i lokalizacja</a>
+    </div>
+  </nav>
+
+  <!-- NAGŁÓWEK PODSTRONY -->
+  <section class="bg-gradient-to-r from-brand-950 via-slate-900 to-slate-950 text-white py-14">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="max-w-2xl">
+        <span class="text-brand-300 text-xs font-bold uppercase tracking-wider">Uproszczona Księgowość</span>
+        <h1 class="text-3xl sm:text-4xl font-extrabold mt-2 mb-4 leading-tight">Księgowość dla Jednoosobowych Firm (JDG) i Kontraktów B2B</h1>
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+          Prowadzisz działalność w Gdańsku lub pracujesz zdalnie na B2B? Zapewniamy bezstresowe rozliczenia podatkowe, optymalizację kosztów oraz wygodny obieg faktur bez wożenia papierów.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GŁÓWNA TREŚĆ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-12 gap-12 items-start">
+      
+      <div class="lg:col-span-8 space-y-8 text-sm sm:text-base text-slate-700 leading-relaxed">
+        <div>
+          <h2 class="text-2xl font-bold text-slate-900 mb-4">Skup się na swojej pracy – my zajmiemy się fiskusem</h2>
+          <p>
+            Dla samozatrudnionych, programistów, konsultantów, lekarzy i przedsiębiorców usługowych czas to pieniądz. Nie musisz śledzić kolejnych nowelizacji przepisów, zawiłości podatku dochodowego ani zasad rozliczania składki zdrowotnej ZUS. W Biurze Trzebiatowska dbamy o to, aby Twoje rozliczenia były zawsze terminowe, dokładne i maksymalnie korzystne finansowo.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-6 pt-4">
+          <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl">
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Ryczałt od Przychodu</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-3">
+              Doskonała opcja dla branży IT, usługodawców i handlu. Prowadzimy ewidencję przychodów, pilnujemy właściwych stawek podatku (np. 12%, 8.5%, 5.5%) oraz rocznych zeznań PIT-28.
+            </p>
+            <span class="text-xs font-bold text-brand-600">✓ Pełna obsługa ewidencji i VAT</span>
+          </div>
+
+          <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl">
+            <h3 class="text-lg font-bold text-slate-900 mb-2">Księga Przychodów (KPiR)</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-3">
+              Dla firm generujących koszty operacyjne (podatek liniowy 19% lub skala podatkowa 12%/32%). Precyzyjna ewidencja kosztów, środków trwałych i odliczeń.
+            </p>
+            <span class="text-xs font-bold text-brand-600">✓ Optymalizacja zaliczek na PIT-5</span>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-bold text-slate-900 mb-4">Co zawiera stała opieka księgowa dla JDG?</h3>
+          <ul class="space-y-3 text-xs sm:text-sm text-slate-700">
+            <li class="flex items-start gap-3">
+              <span class="text-emerald-600 font-bold text-base leading-none">✓</span>
+              <span><strong>Rozliczanie podatku dochodowego:</strong> wyliczanie zaliczek na PIT, sporządzanie rocznych zeznań (PIT-36, PIT-36L, PIT-28).</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-emerald-600 font-bold text-base leading-none">✓</span>
+              <span><strong>Kompleksowa ewidencja VAT:</strong> prowadzenie rejestrów sprzedaży i zakupów, sporządzanie oraz wysyłka plików JPK_V7M / JPK_V7K.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-emerald-600 font-bold text-base leading-none">✓</span>
+              <span><strong>Transakcje międzynarodowe:</strong> rozliczanie importu usług (np. licencje Google, Adobe, AWS, fakturowanie kontrahentów z USA/UE), VAT-UE.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-emerald-600 font-bold text-base leading-none">✓</span>
+              <span><strong>Rozliczenia ZUS właściciela:</strong> comiesięczne deklaracje ZUS DRA, kalkulacja składki zdrowotnej, pilnowanie ulg (Ulga na start, ZUS preferencyjny, Mały ZUS Plus).</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-emerald-600 font-bold text-base leading-none">✓</span>
+              <span><strong>Przygotowanie do KSeF:</strong> bezstresowa obsługa e-faktur ustrukturyzowanych w systemie rządowym.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- PANEL BOCZNY CTA -->
+      <div class="lg:col-span-4 space-y-6">
+        <div class="bg-brand-50/70 border border-brand-200 rounded-3xl p-6 sm:p-8">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-brand-600">Wycena dla JDG</span>
+          <h3 class="text-xl font-bold text-slate-900 mt-1 mb-3">Ile kosztuje księgowość jednoosobowej firmy?</h3>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
+            Ceny za pełną obsługę JDG zaczynają się u nas od <strong>250 – 350 zł netto miesięcznie</strong> (w zależności od liczby faktur i formy opodatkowania).
+          </p>
+
+          <a href="index.html#wycena" class="block w-full bg-brand-600 hover:bg-brand-700 text-white text-center font-bold py-3.5 rounded-xl text-xs transition shadow-sm mb-3">
+            Skorzystaj z kalkulatora wyceny →
+          </a>
+          
+          <a href="tel:+48503596811" class="block w-full bg-white hover:bg-slate-100 text-slate-800 border border-slate-300 text-center font-semibold py-3 rounded-xl text-xs transition">
+            Zadzwoń: +48 503 59 68 11
+          </a>
+        </div>
+
+        <div class="bg-slate-900 text-white p-6 sm:p-7 rounded-3xl shadow-sm text-xs leading-relaxed">
+          <h4 class="font-bold text-sm text-amber-400 mb-2">Przejście z innego biura w 3 krokach</h4>
+          <p class="text-slate-300 mb-3">
+            Jesteś niezadowolony z obecnej księgowości? Przejście do nas jest proste:
+          </p>
+          <ol class="space-y-2 text-slate-300 list-decimal list-inside">
+            <li>Wypowiadasz umowę obecnemu biuru.</li>
+            <li>Przekazujemy Ci gotowy protokół przejęcia dokumentów.</li>
+            <li>Weryfikujemy zapisy i przejmujemy obsługę od kolejnego miesiąca.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 text-slate-400 text-xs pt-12 pb-8 border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+      <div>
+        <div class="bg-white p-2 rounded-xl inline-block mb-3">
+          <img src="assets/img/logo-default.png" alt="Biuro Rachunkowe Trzebiatowska" class="h-9 w-auto">
+        </div>
+        <p class="text-slate-400 leading-relaxed mb-4 text-[11px]">
+          Profesjonalne usługi księgowe i kadrowo-płacowe w Gdańsku na Przymorzu. Licencja Ministerstwa Finansów nr 28310. Ubezpieczenie w Lloyd's.
+        </p>
+      </div>
+      <div>
+        <p class="text-white font-semibold mb-3">Nawigacja</p>
+        <ul class="space-y-2 text-[11px]">
+          <li><a href="index.html" class="hover:text-white transition">Strona Główna</a></li>
+          <li><a href="o-biurze.html" class="hover:text-white transition">O biurze</a></li>
+          <li><a href="certyfikaty.html" class="hover:text-white transition">Certyfikaty i polisa OC</a></li>
+          <li><a href="jak-pracujemy.html" class="hover:text-white transition">Jak pracujemy</a></li>
+          <li><a href="opinie.html" class="hover:text-white transition">Referencje</a></li>
+          <li><a href="kontakt.html" class="hover:text-white transition">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-white font-semibold mb-3">Oferta</p>
+        <ul class="space-y-2 text-[11px]">
+          <li><a href="ksiegowosc-jdg.html" class="text-white font-semibold">Księgowość JDG i B2B</a></li>
+          <li><a href="pelna-ksiegowosc-spolki.html" class="hover:text-white transition">Pełna Księgowość (Spółki)</a></li>
+          <li><a href="kadry-i-place.html" class="hover:text-white transition">Kadry i Płace</a></li>
+          <li><a href="ksef.html" class="hover:text-white transition">Wdrożenie KSeF</a></li>
+          <li><a href="rejestracja-firmy.html" class="hover:text-white transition">Zakładanie firmy za 0 zł</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-white font-semibold mb-3">Kontakt</p>
+        <ul class="space-y-2 text-[11px]">
+          <li class="text-slate-300">📍 ul. Piastowska 89, II piętro<br>80-363 Gdańsk Przymorze</li>
+          <li>📞 <a href="tel:+48503596811" class="text-white font-bold hover:underline">+48 503 59 68 11</a></li>
+          <li>✉ <a href="mailto:kontakt@biurotrzebiatowska.pl" class="hover:text-white">kontakt@biurotrzebiatowska.pl</a></li>
+          <li class="pt-2 text-slate-500">NIP: 584 236 21 95</li>
+        </ul>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 pt-6 border-t border-slate-800 text-[11px] text-center text-slate-500">
+      <p>© 2026 Biuro Rachunkowe Trzebiatowska. Wszelkie prawa zastrzeżone.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
