@@ -86,7 +86,7 @@ Wszystkie 11 podstron zostało w pełni zakodowanych w standardzie HTML5 + Tailw
 6. `kadry-i-place.html` – **Kadry i Płace:** Akta osobowe, listy płac, ZUS DRA, PIT-11, poufność płac.
 7. `ksef.html` – **Wdrożenie KSeF:** 4 etapy przygotowania firmy, ZAW-FA, integracje programów, procedury offline.
 8. `rejestracja-firmy.html` – **Zakładanie Firmy za 0 zł:** Bezpłatna pomoc przy CEIDG/S24 przy umowie na księgowość, dobór kodów PKD.
-9. `jak-pracujemy.html` – **Jak Pracujemy:** Cyfrowy obieg faktur, zdjęcia smartfonem, bezpieczeństwo RODO, harmonogram miesiąca.
+9. `jak-pracujemy.html` – **Jak Pracujemy:** Cyfrowy obieg faktur (e-mail / PDF / KSeF), bezpieczeństwo RODO, harmonogram miesiąca.
 10. `opinie.html` – **Referencje:** IMP PAN (prof. Kiciński), ZUH Sosnowski, Google Reviews 5.0.
 11. `kontakt.html` – **Kontakt i Dojazd:** ul. Piastowska 89 Gdańsk Przymorze, interaktywna mapa Google, dane rejestrowe NIP, formularz.
 
@@ -145,7 +145,7 @@ Zdecydowanie odradzam „łatanie” obecnego szablonu. Przypomina to remontowan
 
 Co zyska Pani dzięki nowej witrynie?
 - Wizerunek eksperta z ludzką twarzą: Wyeksponujemy Pani licencję MF, wyróżnienie Orły Rachunkowości oraz profesjonalne zdjęcia z motywem przewodnim „porozmawiajmy przy kawie”.
-- Nowoczesna oferta i KSeF: Dedykowana sekcja o wdrożeniu KSeF oraz informacja o wygodnym przesyłaniu dokumentów online smartfonem.
+- Nowoczesna oferta i KSeF: Dedykowana sekcja o wdrożeniu KSeF oraz informacja o wygodnym przesyłaniu dokumentów online (e-mail / PDF).
 - Więcej zapytań od nowych firm: Intuicyjny kalkulator szybkiej wyceny oraz przycisk „Zadzwoń teraz” na telefonach.
 - Spokój i prostota: Szybka strona i intuicyjny panel do samodzielnej edycji.
 
@@ -169,3 +169,12 @@ cd biuro-trzebiatowska
 ```
 * **Otwarcie strony:** Wystarczy dwuklik w plik `index.html` lub uruchomienie dowolnego serwera lokalnego (`python -m http.server 8000` lub `npx serve`).
 * Wszystkie zależności (Tailwind CDN, Google Fonts, ikony, lokalne grafiki) działają od razu bez konieczności instalowania `npm install`.
+
+---
+
+## 9. Ostatnie Zmiany: Uproszczenie i Uspokojenie Strony Głównej (Decluttering)
+* **Usunięcie natłoku plakietek i naklejek:** Usunięto pływające naklejki ze zdjęcia p. Katarzyny (kawa, pulsująca kropka) oraz gradienty przyciemniające portret.
+* **Ujednolicenie kolorystyki:** Usunięto jaskrawo-żółte i agresywnie ciemne bloki z sekcji oferty, wprowadzając harmonijny, jasny pasek informacyjny KSeF + Rejestracja.
+* **Odchudzenie strony głównej:** Usunięto 4 duże miniatury certyfikatów ze strony głównej (pozostają w pełnej krasie na dedykowanej podstronie `certyfikaty.html`), dzięki czemu strona główna zyskała lekkość i oddech.
+* **Jasny, elegancki kalkulator:** Sekcja wyceny zyskała czystą, subtelną estetykę na jasnym tle zamiast kontrastowego, ciemnego gradientu.
+* **Harmonizacja kart:** Ujednolicono kolory ikon, linków i znaczników (jeden spójny motyw marki).

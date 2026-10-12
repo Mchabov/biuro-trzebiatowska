@@ -70,14 +70,25 @@
   <header class="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
     <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
       <div class="flex items-center space-x-4 sm:space-x-6 text-[11px] sm:text-xs">
-        <span class="flex items-center gap-1.5">📍 ul. Piastowska 89, Gdańsk Przymorze</span>
+        <span data-i18n="top_address" class="flex items-center gap-1.5">📍 ul. Piastowska 89, Gdańsk Przymorze</span>
         <span class="hidden md:inline text-slate-500">|</span>
-        <span class="hidden md:inline">⏰ Pn – Pt: 8:00 – 16:00</span>
+        <span data-i18n="top_hours" class="hidden md:inline">⏰ Pn – Pt: 8:00 – 16:00</span>
       </div>
-      <div class="flex items-center space-x-4 text-[11px] sm:text-xs font-medium">
+      <div class="flex items-center space-x-3 sm:space-x-4 text-[11px] sm:text-xs font-medium">
         <a href="tel:+48503596811" class="text-amber-400 hover:text-amber-300 transition flex items-center gap-1">📞 +48 503 59 68 11</a>
         <span class="text-slate-700">|</span>
         <a href="mailto:kontakt@biurotrzebiatowska.pl" class="hover:text-white transition">✉ kontakt@biurotrzebiatowska.pl</a>
+        <span class="text-slate-700">|</span>
+        
+        <!-- PRZEŁĄCZNIK JĘZYKA W TOP BARZE -->
+        <div class="inline-flex items-center bg-slate-800 rounded-lg p-0.5 border border-slate-700 text-[10px]">
+          <button type="button" data-lang="pl" class="lang-toggle-btn px-2 py-0.5 rounded transition font-bold bg-brand-600 text-white flex items-center gap-1">
+            <span>🇵🇱</span> <span>PL</span>
+          </button>
+          <button type="button" data-lang="en" class="lang-toggle-btn px-2 py-0.5 rounded transition text-slate-400 hover:text-white flex items-center gap-1">
+            <span>🇬🇧</span> <span>EN</span>
+          </button>
+        </div>
       </div>
     </div>
   </header>
@@ -90,36 +101,46 @@
       </a>
 
       <!-- MENU DESKTOP -->
-      <div class="hidden lg:flex items-center space-x-7 text-sm font-medium text-slate-700">
-        <a href="index.html" class="nav-link active">Strona Główna</a>
-        <a href="o-biurze.html" class="nav-link hover:text-brand-600 transition">O biurze</a>
-        <a href="certyfikaty.html" class="nav-link hover:text-brand-600 transition">Certyfikaty</a>
+      <div class="hidden lg:flex items-center space-x-6 text-sm font-medium text-slate-700">
+        <a href="index.html" data-i18n="nav_home" class="nav-link active">Strona Główna</a>
+        <a href="o-biurze.html" data-i18n="nav_about" class="nav-link hover:text-brand-600 transition">O biurze</a>
+        <a href="certyfikaty.html" data-i18n="nav_certificates" class="nav-link hover:text-brand-600 transition">Certyfikaty</a>
         
         <!-- DROPDOWN OFERTA -->
         <div class="relative group py-2">
           <button class="nav-link hover:text-brand-600 transition flex items-center gap-1">
-            Oferta <span class="text-[10px]">▼</span>
+            <span data-i18n="nav_offer">Oferta</span> <span class="text-[10px]">▼</span>
           </button>
           <div class="absolute left-0 top-full hidden group-hover:block bg-white border border-slate-200 shadow-xl rounded-xl py-2 w-64 z-50">
-            <a href="ksiegowosc-jdg.html" class="block px-4 py-2 text-xs text-slate-700 hover:bg-brand-50 hover:text-brand-600 font-medium">Księgowość JDG i B2B</a>
-            <a href="pelna-ksiegowosc-spolki.html" class="block px-4 py-2 text-xs text-slate-700 hover:bg-brand-50 hover:text-brand-600 font-medium">Pełna Księgowość (Spółki z o.o.)</a>
-            <a href="kadry-i-place.html" class="block px-4 py-2 text-xs text-slate-700 hover:bg-brand-50 hover:text-brand-600 font-medium">Kadry i Płace</a>
+            <a href="ksiegowosc-jdg.html" data-i18n="nav_jdg" class="block px-4 py-2 text-xs text-slate-700 hover:bg-brand-50 hover:text-brand-600 font-medium">Księgowość JDG i B2B</a>
+            <a href="pelna-ksiegowosc-spolki.html" data-i18n="nav_spolki" class="block px-4 py-2 text-xs text-slate-700 hover:bg-brand-50 hover:text-brand-600 font-medium">Pełna Księgowość (Spółki z o.o.)</a>
+            <a href="kadry-i-place.html" data-i18n="nav_kadry" class="block px-4 py-2 text-xs text-slate-700 hover:bg-brand-50 hover:text-brand-600 font-medium">Kadry i Płace</a>
             <div class="border-t border-slate-100 my-1"></div>
             <a href="ksef.html" class="block px-4 py-2 text-xs text-brand-800 bg-brand-50/50 hover:bg-brand-100 font-semibold flex items-center justify-between">
-              Wdrożenie KSeF <span class="text-[9px] bg-brand-600 text-white px-1.5 py-0.5 rounded">Nowość</span>
+              <span data-i18n="nav_ksef">Wdrożenie KSeF</span> <span data-i18n="nav_ksef_badge" class="text-[9px] bg-brand-600 text-white px-1.5 py-0.5 rounded">Nowość</span>
             </a>
-            <a href="rejestracja-firmy.html" class="block px-4 py-2 text-xs text-slate-700 hover:bg-brand-50 hover:text-brand-600 font-medium">Zakładanie firmy za 0 zł</a>
+            <a href="rejestracja-firmy.html" data-i18n="nav_rejestracja" class="block px-4 py-2 text-xs text-slate-700 hover:bg-brand-50 hover:text-brand-600 font-medium">Zakładanie firmy za 0 zł</a>
           </div>
         </div>
 
-        <a href="jak-pracujemy.html" class="nav-link hover:text-brand-600 transition">Jak pracujemy</a>
-        <a href="opinie.html" class="nav-link hover:text-brand-600 transition">Opinie</a>
-        <a href="kontakt.html" class="nav-link hover:text-brand-600 transition">Kontakt</a>
+        <a href="jak-pracujemy.html" data-i18n="nav_how_we_work" class="nav-link hover:text-brand-600 transition">Jak pracujemy</a>
+        <a href="opinie.html" data-i18n="nav_reviews" class="nav-link hover:text-brand-600 transition">Opinie</a>
+        <a href="kontakt.html" data-i18n="nav_contact" class="nav-link hover:text-brand-600 transition">Kontakt</a>
       </div>
 
-      <!-- PRZYCISK PRAWA STRONA -->
+      <!-- PRZYCISKI PRAWA STRONA DESKTOP -->
       <div class="hidden sm:flex items-center gap-3">
-        <a href="#wycena" class="bg-brand-600 hover:bg-brand-700 text-white text-xs font-semibold px-4 py-2.5 rounded-xl shadow-xs transition">
+        <!-- PRZEŁĄCZNIK JĘZYKA W NAVBARZE -->
+        <div class="inline-flex items-center bg-slate-100 rounded-xl p-1 border border-slate-200 text-xs">
+          <button type="button" data-lang="pl" class="lang-toggle-btn px-2.5 py-1 rounded-lg transition font-bold bg-brand-600 text-white shadow-xs flex items-center gap-1.5">
+            <span>🇵🇱</span> <span>PL</span>
+          </button>
+          <button type="button" data-lang="en" class="lang-toggle-btn px-2.5 py-1 rounded-lg transition text-slate-600 hover:text-slate-900 flex items-center gap-1.5">
+            <span>🇬🇧</span> <span>EN</span>
+          </button>
+        </div>
+
+        <a href="#wycena" data-i18n="nav_quote_btn" class="bg-brand-600 hover:bg-brand-700 text-white text-xs font-semibold px-4 py-2.5 rounded-xl shadow-xs transition">
           Szybka wycena
         </a>
       </div>
@@ -134,22 +155,33 @@
 
     <!-- MENU MOBILNE -->
     <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-2 text-sm">
-      <a href="index.html" class="block py-2 text-brand-600 font-semibold">Strona Główna</a>
-      <a href="o-biurze.html" class="block py-2 text-slate-700">O biurze i doświadczenie</a>
-      <a href="certyfikaty.html" class="block py-2 text-slate-700">Certyfikaty i polisa OC</a>
-      <div class="py-1 pl-3 border-l-2 border-brand-200 space-y-2 text-xs">
-        <p class="font-bold text-slate-400 uppercase tracking-wider text-[10px]">Oferta:</p>
-        <a href="ksiegowosc-jdg.html" class="block py-1 text-slate-700">Księgowość JDG i B2B</a>
-        <a href="pelna-ksiegowosc-spolki.html" class="block py-1 text-slate-700">Pełna Księgowość (Spółki)</a>
-        <a href="kadry-i-place.html" class="block py-1 text-slate-700">Kadry i Płace</a>
-        <a href="ksef.html" class="block py-1 text-brand-600 font-semibold">Wdrożenie KSeF</a>
-        <a href="rejestracja-firmy.html" class="block py-1 text-slate-700">Zakładanie firmy za 0 zł</a>
+      <!-- WYBÓR JĘZYKA NA MOBILE -->
+      <div class="flex items-center justify-between bg-slate-50 p-2.5 rounded-xl border border-slate-200 mb-3">
+        <span class="text-xs font-semibold text-slate-700">Język / Language:</span>
+        <div class="inline-flex items-center bg-white rounded-lg p-0.5 border border-slate-200 text-xs">
+          <button type="button" data-lang="pl" class="lang-toggle-btn px-3 py-1 rounded-md transition font-bold bg-brand-600 text-white">🇵🇱 PL</button>
+          <button type="button" data-lang="en" class="lang-toggle-btn px-3 py-1 rounded-md transition text-slate-600">🇬🇧 EN</button>
+        </div>
       </div>
-      <a href="jak-pracujemy.html" class="block py-2 text-slate-700">Jak pracujemy (obieg online)</a>
-      <a href="opinie.html" class="block py-2 text-slate-700">Opinie i referencje</a>
-      <a href="kontakt.html" class="block py-2 text-slate-700">Kontakt i lokalizacja</a>
+
+      <a href="index.html" data-i18n="nav_home" class="block py-2 text-brand-600 font-semibold">Strona Główna</a>
+      <a href="o-biurze.html" data-i18n="nav_about" class="block py-2 text-slate-700">O biurze i doświadczenie</a>
+      <a href="certyfikaty.html" data-i18n="nav_certificates" class="block py-2 text-slate-700">Certyfikaty i polisa OC</a>
+      <div class="py-1 pl-3 border-l-2 border-brand-200 space-y-2 text-xs">
+        <p data-i18n="mobile_offer_title" class="font-bold text-slate-400 uppercase tracking-wider text-[10px]">Oferta:</p>
+        <a href="ksiegowosc-jdg.html" data-i18n="nav_jdg" class="block py-1 text-slate-700">Księgowość JDG i B2B</a>
+        <a href="pelna-ksiegowosc-spolki.html" data-i18n="nav_spolki" class="block py-1 text-slate-700">Pełna Księgowość (Spółki)</a>
+        <a href="kadry-i-place.html" data-i18n="nav_kadry" class="block py-1 text-slate-700">Kadry i Płace</a>
+        <a href="ksef.html" class="block py-1 text-brand-600 font-semibold flex items-center justify-between">
+          <span data-i18n="nav_ksef">Wdrożenie KSeF</span> <span data-i18n="nav_ksef_badge" class="text-[9px] bg-brand-600 text-white px-1.5 py-0.5 rounded">Nowość</span>
+        </a>
+        <a href="rejestracja-firmy.html" data-i18n="nav_rejestracja" class="block py-1 text-slate-700">Zakładanie firmy za 0 zł</a>
+      </div>
+      <a href="jak-pracujemy.html" data-i18n="nav_how_we_work" class="block py-2 text-slate-700">Jak pracujemy (obieg online)</a>
+      <a href="opinie.html" data-i18n="nav_reviews" class="block py-2 text-slate-700">Opinie i referencje</a>
+      <a href="kontakt.html" data-i18n="nav_contact" class="block py-2 text-slate-700">Kontakt i lokalizacja</a>
       <div class="pt-3">
-        <a href="#wycena" class="block w-full bg-brand-600 text-white text-center py-2.5 rounded-xl font-semibold text-xs">
+        <a href="#wycena" data-i18n="nav_mobile_quote" class="block w-full bg-brand-600 text-white text-center py-2.5 rounded-xl font-semibold text-xs">
           Wyceń księgowość w 1 minutę
         </a>
       </div>
@@ -157,77 +189,127 @@
   </nav>
 
   <!-- 1. HERO SECTION -->
-  <section class="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-brand-50/50 via-white to-slate-50 border-b border-slate-100">
-    <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-12 gap-10 items-center">
+  <section class="py-12 sm:py-16 lg:py-20 bg-white border-b border-slate-100">
+    <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
       <div class="lg:col-span-7">
-        <div class="inline-flex items-center gap-2 bg-brand-100/80 text-brand-900 text-xs font-semibold px-3.5 py-1.5 rounded-full mb-5 shadow-xs border border-brand-200/50">
-          <span>☕ Indywidualne podejście • Księgowość z ludzką twarzą</span>
+        <div class="inline-flex items-center gap-2 bg-brand-50 text-brand-800 text-xs font-semibold px-3 py-1 rounded-full mb-6 border border-brand-100/60">
+          <span data-i18n="hero_tag">☕ Indywidualne podejście • Księgowość z ludzką twarzą</span>
         </div>
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight mb-5">
+        <h1 data-i18n="hero_title" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight mb-5 tracking-tight">
           Spokojna głowa o podatki i finanse Twojej firmy w Gdańsku
         </h1>
-        <p class="text-base sm:text-lg text-slate-600 mb-8 leading-relaxed max-w-xl">
+        <p data-i18n="hero_desc" class="text-base sm:text-lg text-slate-600 mb-8 leading-relaxed max-w-xl">
           Prowadzimy pełną księgowość dla spółek, KPiR, ryczałt oraz kadry i płace. Łączymy ponad 15 lat rzetelnego doświadczenia z partnerską atmosferą i wygodnym obiegiem dokumentów w 100% online.
         </p>
         
-        <div class="flex flex-col sm:flex-row gap-3.5 mb-10">
-          <a href="#wycena" class="bg-brand-600 hover:bg-brand-700 text-white text-center font-semibold px-6 py-3.5 rounded-xl shadow-md transition text-sm">
+        <div class="flex flex-col sm:flex-row gap-3.5 mb-8">
+          <a href="#wycena" data-i18n="hero_btn_calc" class="bg-brand-600 hover:bg-brand-700 text-white text-center font-semibold px-7 py-3.5 rounded-xl shadow-sm transition text-sm">
             Wyceń księgowość w 1 minutę
           </a>
-          <a href="tel:+48503596811" class="border border-slate-300 hover:bg-white text-slate-800 text-center font-semibold px-6 py-3.5 rounded-xl transition text-sm flex items-center justify-center gap-2">
+          <a href="tel:+48503596811" data-i18n="hero_btn_call" class="border border-slate-300 hover:bg-slate-50 text-slate-800 text-center font-semibold px-6 py-3.5 rounded-xl transition text-sm flex items-center justify-center gap-2">
             <span>📞 Zadzwoń: +48 503 59 68 11</span>
           </a>
         </div>
 
-        <!-- TRUST BADGES -->
-        <div class="pt-6 border-t border-slate-200 grid grid-cols-3 gap-3 text-left">
-          <div class="bg-white p-3.5 rounded-xl border border-slate-200/80 shadow-xs">
-            <p class="font-bold text-slate-900 text-xs sm:text-sm">Licencja MF</p>
-            <p class="text-[11px] text-slate-500">Wpis nr 28310</p>
+        <!-- CZYSTY, SPOKOJNY PASEK ZAUFANIA (BEZ CIĘŻKICH BOKSÓW) -->
+        <div class="pt-6 border-t border-slate-100 flex flex-wrap items-center gap-x-8 gap-y-3 text-xs text-slate-600">
+          <div class="flex items-center gap-2">
+            <span class="text-brand-600 font-bold">✓</span>
+            <span><strong data-i18n="trust_mf_title" class="text-slate-900 font-bold">Licencja MF</strong> <span data-i18n="trust_mf_sub" class="text-slate-500">nr 28310</span></span>
           </div>
-          <div class="bg-white p-3.5 rounded-xl border border-slate-200/80 shadow-xs">
-            <p class="font-bold text-slate-900 text-xs sm:text-sm">Polisa OC</p>
-            <p class="text-[11px] text-slate-500">Lloyd's Insurance</p>
+          <div class="flex items-center gap-2">
+            <span class="text-brand-600 font-bold">✓</span>
+            <span><strong data-i18n="trust_oc_title" class="text-slate-900 font-bold">Polisa OC</strong> <span data-i18n="trust_oc_sub" class="text-slate-500">Lloyd's</span></span>
           </div>
-          <div class="bg-white p-3.5 rounded-xl border border-slate-200/80 shadow-xs">
-            <p class="font-bold text-slate-900 text-xs sm:text-sm">Orły Rachunkowości</p>
-            <p class="text-[11px] text-slate-500">Laureat plebiscytu</p>
+          <div class="flex items-center gap-2">
+            <span class="text-amber-500 font-bold">★</span>
+            <span><strong data-i18n="trust_orly_title" class="text-slate-900 font-bold">Orły Rachunkowości</strong> <span data-i18n="trust_orly_sub" class="text-slate-500">Laureat</span></span>
           </div>
         </div>
       </div>
 
-      <!-- KARTA WIZERUNKOWA PANI KATARZYNY -->
+      <!-- KARTA WIZERUNKOWA PANI KATARZYNY (CZYSTA, SPOKOJNA, BEZ NAKLEJEK) -->
       <div class="lg:col-span-5">
-        <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/90 shadow-xl relative overflow-hidden">
-          <div class="flex items-center gap-4 mb-4">
-            <img src="assets/img/favicon.png" alt="Biuro Trzebiatowska" class="w-16 h-16 rounded-2xl shadow-xs border border-brand-100 p-1 bg-brand-50">
+        <div class="bg-white rounded-3xl border border-slate-200/90 shadow-md overflow-hidden">
+          <!-- ZDJĘCIE PANI KATARZYNY BEZ CIĘŻKICH GRADIENTÓW I NAKLEJEK -->
+          <div class="relative h-72 sm:h-80 w-full bg-slate-100">
+            <img src="assets/img/foto-katarzyna-trzebiatowska.jpg" alt="Katarzyna Trzebiatowska - Główna Księgowa" class="w-full h-full object-cover object-top">
+          </div>
+
+          <!-- TREŚĆ KARTY -->
+          <div class="p-6 sm:p-7 space-y-4">
             <div>
-              <span class="text-xs font-bold uppercase tracking-wider text-brand-600 block">Główna Księgowa</span>
-              <h2 class="text-xl sm:text-2xl font-bold text-slate-900">Katarzyna Trzebiatowska</h2>
+              <span data-i18n="card_owner_role" class="text-[11px] font-bold uppercase tracking-wider text-brand-600 block">Właścicielka & Główna Księgowa</span>
+              <h2 class="text-xl font-extrabold text-slate-900 mt-0.5">Katarzyna Trzebiatowska</h2>
+            </div>
+
+            <p data-i18n="card_quote" class="text-slate-600 text-xs sm:text-sm leading-relaxed italic border-l-2 border-brand-500 pl-3">
+              „Wiem, że przedsiębiorcy najbardziej potrzebują spokoju, jasnych odpowiedzi bez żargonu i pewności, że rozliczenia są bezpieczne. Zapraszam na rozmowę o Państwa biznesie – przy dobrej kawie.”
+            </p>
+
+            <ul class="space-y-2 text-xs text-slate-700 pt-1">
+              <li class="flex items-center gap-2">
+                <span class="text-brand-600 font-bold">✓</span>
+                <span data-i18n="card_f1"><strong>Licencja MF nr 28310</strong> (państwowe uprawnienia)</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-brand-600 font-bold">✓</span>
+                <span data-i18n="card_f2">Ponad 15 lat nieprzerwanej praktyki gospodarczej</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-brand-600 font-bold">✓</span>
+                <span data-i18n="card_f3">Absolwentka Uniwersytetu Gdańskiego</span>
+              </li>
+            </ul>
+
+            <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+              <a href="o-biurze.html" data-i18n="card_link_story" class="text-brand-600 font-bold hover:text-brand-700 flex items-center gap-1">
+                Poznaj historię biura <span>→</span>
+              </a>
+              <a href="certyfikaty.html" data-i18n="card_link_cert" class="text-slate-500 hover:text-slate-800 font-medium">
+                Certyfikaty i polisa OC
+              </a>
             </div>
           </div>
-          <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">
-            „Wiem, że przedsiębiorcy najbardziej potrzebują spokoju, jasnych odpowiedzi bez żargonu urzędowego i pewności, że ich rozliczenia są bezpieczne. Serdecznie zapraszam na rozmowę o Państwa biznesie – przy dobrej kawie lub herbacie.”
-          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-          <div class="bg-slate-50 border border-slate-200 rounded-xl p-3.5 space-y-2 text-xs text-slate-700">
-            <div class="flex items-center gap-2">
-              <span class="text-brand-600 font-bold">✓</span>
-              <span>Ponad 15 lat praktyki zawodowej</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <span class="text-brand-600 font-bold">✓</span>
-              <span>Absolwentka Uniwersytetu Gdańskiego</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <span class="text-brand-600 font-bold">✓</span>
-              <span>Członek Stowarzyszenia Księgowych w Polsce</span>
-            </div>
+  <!-- PASEK SOCIAL PROOF: AUTENTYCZNE LOGO KLIENTÓW I INSTYTUCJI -->
+  <section class="bg-white py-6 border-b border-slate-200/80 shadow-xs">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-6">
+        <div class="text-center lg:text-left">
+          <p data-i18n="proof_lead" class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Zaufali nam liderzy nauki, przemysłu i B2B:</p>
+          <p data-i18n="proof_sub" class="text-xs font-semibold text-slate-800 mt-0.5">Wieloletnia współpraca oparta na odpowiedzialności</p>
+        </div>
+        
+        <div class="flex flex-wrap items-center justify-center gap-8 sm:gap-12">
+          <!-- IMP PAN -->
+          <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition opacity-80 hover:opacity-100">
+            <img src="assets/img/logo-imp-pan.png" alt="Instytut Maszyn Przepływowych PAN" class="h-9 w-auto object-contain">
+            <span class="text-xs font-bold text-slate-700 leading-tight hidden sm:inline">IMP PAN<br><span data-i18n="proof_pan" class="text-[10px] font-normal text-slate-500">Polska Akademia Nauk</span></span>
           </div>
 
-          <div class="mt-6 pt-4 border-t border-slate-100 flex justify-between items-center text-xs">
-            <a href="o-biurze.html" class="text-brand-600 font-semibold hover:underline">Poznaj naszą historię →</a>
-            <a href="certyfikaty.html" class="text-slate-500 hover:text-slate-800">Zobacz certyfikaty (PDF)</a>
+          <!-- SOSNOWSKI -->
+          <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition opacity-80 hover:opacity-100">
+            <img src="assets/img/logo-sosnowski.png" alt="ZUH Sosnowski" class="h-8 w-auto object-contain">
+            <span class="text-xs font-bold text-slate-700 leading-tight hidden sm:inline">Sosnowski<br><span data-i18n="proof_sosn" class="text-[10px] font-normal text-slate-500">Wyposażenie Serwisów</span></span>
+          </div>
+
+          <!-- DAMAR -->
+          <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition opacity-80 hover:opacity-100">
+            <img src="assets/img/logo-damar.jpg" alt="Damar" class="h-8 w-auto object-contain rounded">
+            <span class="text-xs font-bold text-slate-700 leading-tight hidden sm:inline">Damar Sp. z o.o.<br><span data-i18n="proof_damar" class="text-[10px] font-normal text-slate-500">Przemysł & Usługi</span></span>
+          </div>
+
+          <!-- LLOYD'S & ORŁY -->
+          <div class="h-8 w-px bg-slate-200 hidden md:block"></div>
+          <div class="flex items-center gap-4 text-xs font-semibold text-slate-600">
+            <span data-i18n="proof_orly" class="flex items-center gap-1.5"><span class="text-amber-500 font-bold">★</span> Orły Rachunkowości</span>
+            <span class="text-slate-300">•</span>
+            <span data-i18n="proof_lloyds">Ubezpieczenie Lloyd's</span>
           </div>
         </div>
       </div>
@@ -238,36 +320,36 @@
   <section class="py-14 sm:py-16 bg-white border-b border-slate-100">
     <div class="max-w-6xl mx-auto px-4">
       <div class="text-center max-w-2xl mx-auto mb-12">
-        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Dlaczego przedsiębiorcy wybierają nasze biuro?</h2>
-        <p class="text-slate-600 mt-2 text-sm">Przejrzyste zasady, bezpieczeństwo finansowe i partnerski kontakt na każdym etapie.</p>
+        <h2 data-i18n="pillars_title" class="text-2xl sm:text-3xl font-bold text-slate-900">Dlaczego przedsiębiorcy wybierają nasze biuro?</h2>
+        <p data-i18n="pillars_sub" class="text-slate-600 mt-2 text-sm">Przejrzyste zasady, bezpieczeństwo finansowe i partnerski kontakt na każdym etapie.</p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-6">
-        <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50 card-hover">
-          <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center text-xl mb-4 font-bold">🛡️</div>
-          <h3 class="text-lg font-bold text-slate-900 mb-2">100% Bezpieczeństwa</h3>
-          <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+        <div class="p-6 rounded-2xl border border-slate-200/80 bg-white shadow-xs card-hover">
+          <div class="w-11 h-11 rounded-xl bg-slate-100 text-slate-800 flex items-center justify-center text-lg mb-4 font-bold">🛡️</div>
+          <h3 data-i18n="pil1_title" class="text-lg font-bold text-slate-900 mb-2">100% Bezpieczeństwa</h3>
+          <p data-i18n="pil1_desc" class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
             Bierzemy pełną odpowiedzialność za prowadzone księgi. Posiadamy ubezpieczenie OC w renomowanym towarzystwie Lloyd’s oraz państwową licencję MF.
           </p>
-          <a href="certyfikaty.html" class="text-xs font-semibold text-brand-600 hover:underline">Dowiedz się więcej o ochronie →</a>
+          <a href="certyfikaty.html" data-i18n="pil1_link" class="text-xs font-semibold text-brand-600 hover:underline">Dowiedz się więcej o ochronie →</a>
         </div>
 
-        <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50 card-hover">
-          <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-xl mb-4 font-bold">⏱️</div>
-          <h3 class="text-lg font-bold text-slate-900 mb-2">Pewna Terminowość</h3>
-          <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+        <div class="p-6 rounded-2xl border border-slate-200/80 bg-white shadow-xs card-hover">
+          <div class="w-11 h-11 rounded-xl bg-slate-100 text-slate-800 flex items-center justify-center text-lg mb-4 font-bold">⏱️</div>
+          <h3 data-i18n="pil2_title" class="text-lg font-bold text-slate-900 mb-2">Pewna Terminowość</h3>
+          <p data-i18n="pil2_desc" class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
             Zawsze z wyprzedzeniem wiesz, jakie podatki i składki ZUS masz do zapłacenia. Pilnujemy wszystkich terminów ustawowych, abyś Ty mógł spać spokojnie.
           </p>
-          <a href="jak-pracujemy.html" class="text-xs font-semibold text-emerald-700 hover:underline">Sprawdź procedury →</a>
+          <a href="jak-pracujemy.html" data-i18n="pil2_link" class="text-xs font-semibold text-brand-600 hover:underline">Sprawdź procedury →</a>
         </div>
 
-        <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50 card-hover">
-          <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl mb-4 font-bold">☕</div>
-          <h3 class="text-lg font-bold text-slate-900 mb-2">Partnerstwo i Czas</h3>
-          <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+        <div class="p-6 rounded-2xl border border-slate-200/80 bg-white shadow-xs card-hover">
+          <div class="w-11 h-11 rounded-xl bg-slate-100 text-slate-800 flex items-center justify-center text-lg mb-4 font-bold">☕</div>
+          <h3 data-i18n="pil3_title" class="text-lg font-bold text-slate-900 mb-2">Partnerstwo i Czas</h3>
+          <p data-i18n="pil3_desc" class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
             U nas nie jesteś kolejnym numerem w korporacyjnym systemie. Masz bezpośredni kontakt ze swoją księgową, która zna specyfikę Twojej branży.
           </p>
-          <a href="o-biurze.html" class="text-xs font-semibold text-amber-700 hover:underline">O naszym podejściu →</a>
+          <a href="o-biurze.html" data-i18n="pil3_link" class="text-xs font-semibold text-brand-600 hover:underline">O naszym podejściu →</a>
         </div>
       </div>
     </div>
@@ -278,142 +360,146 @@
     <div class="max-w-6xl mx-auto px-4">
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
         <div>
-          <span class="text-xs font-bold uppercase tracking-wider text-brand-600">Dopasowana do Ciebie</span>
-          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Kompleksowe usługi księgowo-kadrowe</h2>
+          <span data-i18n="offer_tag" class="text-xs font-bold uppercase tracking-wider text-brand-600">Dopasowana do Ciebie</span>
+          <h2 data-i18n="offer_title" class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Kompleksowe usługi księgowo-kadrowe</h2>
         </div>
-        <p class="text-slate-600 text-xs sm:text-sm max-w-md">
+        <p data-i18n="offer_sub" class="text-slate-600 text-xs sm:text-sm max-w-md">
           Wybierz interesujący Cię obszar, aby przejść do szczegółów oferty i poznać dokładny zakres obsługi.
         </p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-6 mb-8">
-        <!-- KAFEL 1 -->
-        <div class="bg-white p-7 rounded-2xl border border-slate-200/90 shadow-sm flex flex-col justify-between card-hover">
+        <!-- KAFEL 1: JDG -->
+        <div class="bg-white rounded-2xl border border-slate-200/90 shadow-sm flex flex-col justify-between overflow-hidden card-hover">
           <div>
-            <span class="text-[11px] font-bold uppercase tracking-wider text-brand-600 bg-brand-50 px-2.5 py-1 rounded">Dla Samozatrudnionych</span>
-            <h3 class="text-xl font-bold text-slate-900 mt-4 mb-2">Księgowość JDG i B2B</h3>
-            <p class="text-slate-600 text-xs sm:text-sm mb-4 leading-relaxed">
-              Obsługa jednoosobowych działalności gospodarczych, programistów na ryczałcie oraz firm usługowych.
-            </p>
-            <ul class="text-xs text-slate-600 space-y-2 mb-6">
-              <li class="flex items-center gap-2">✓ Ryczałt ewidencjonowany i KPiR</li>
-              <li class="flex items-center gap-2">✓ Rozliczenia VAT, transakcje UE i JPK</li>
-              <li class="flex items-center gap-2">✓ Optymalizacja formy opodatkowania</li>
-            </ul>
+            <div class="img-zoom-container h-44 w-full bg-slate-100 relative">
+              <img src="assets/img/foto-pkpir.jpeg" alt="Księgowość JDG i B2B Gdańsk" class="w-full h-full object-cover">
+              <span data-i18n="srv1_tag" class="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider text-slate-800 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-full shadow-xs border border-slate-200/60">Dla Samozatrudnionych</span>
+            </div>
+            <div class="p-6">
+              <h3 data-i18n="srv1_title" class="text-xl font-bold text-slate-900 mb-2">Księgowość JDG i B2B</h3>
+              <p data-i18n="srv1_desc" class="text-slate-600 text-xs sm:text-sm mb-4 leading-relaxed">
+                Obsługa jednoosobowych działalności gospodarczych, programistów na ryczałcie oraz firm usługowych.
+              </p>
+              <ul class="text-xs text-slate-600 space-y-2 mb-2">
+                <li class="flex items-center gap-2"><span class="text-brand-600 font-bold">✓</span> <span data-i18n="srv1_f1">Ryczałt ewidencjonowany i KPiR</span></li>
+                <li class="flex items-center gap-2"><span class="text-brand-600 font-bold">✓</span> <span data-i18n="srv1_f2">Rozliczenia VAT, transakcje UE i JPK</span></li>
+                <li class="flex items-center gap-2"><span class="text-brand-600 font-bold">✓</span> <span data-i18n="srv1_f3">Optymalizacja formy opodatkowania</span></li>
+              </ul>
+            </div>
           </div>
-          <a href="ksiegowosc-jdg.html" class="text-xs font-bold text-brand-600 hover:text-brand-800 flex items-center justify-between pt-4 border-t border-slate-100">
-            <span>Szczegóły oferty dla JDG</span>
-            <span>→</span>
-          </a>
+          <div class="px-6 pb-6 pt-0">
+            <a href="ksiegowosc-jdg.html" class="text-xs font-bold text-brand-600 hover:text-brand-800 flex items-center justify-between pt-4 border-t border-slate-100">
+              <span data-i18n="srv1_link">Szczegóły oferty dla JDG</span>
+              <span>→</span>
+            </a>
+          </div>
         </div>
 
-        <!-- KAFEL 2 -->
-        <div class="bg-white p-7 rounded-2xl border border-slate-200/90 shadow-sm flex flex-col justify-between card-hover">
+        <!-- KAFEL 2: SPÓŁKI -->
+        <div class="bg-white rounded-2xl border border-slate-200/90 shadow-sm flex flex-col justify-between overflow-hidden card-hover">
           <div>
-            <span class="text-[11px] font-bold uppercase tracking-wider text-purple-700 bg-purple-50 px-2.5 py-1 rounded">Dla Spółek</span>
-            <h3 class="text-xl font-bold text-slate-900 mt-4 mb-2">Pełna Księgowość</h3>
-            <p class="text-slate-600 text-xs sm:text-sm mb-4 leading-relaxed">
-              Prowadzenie ksiąg handlowych dla Spółek z o.o., komandytowych oraz innych podmiotów gospodarczych.
-            </p>
-            <ul class="text-xs text-slate-600 space-y-2 mb-6">
-              <li class="flex items-center gap-2">✓ Prowadzenie pełnych ksiąg rachunkowych</li>
-              <li class="flex items-center gap-2">✓ Roczne sprawozdania finansowe (e-KRS)</li>
-              <li class="flex items-center gap-2">✓ Raportowanie dla zarządu i banków</li>
-            </ul>
+            <div class="img-zoom-container h-44 w-full bg-slate-100 relative">
+              <img src="assets/img/foto-pelna-ksiegowosc.jpg" alt="Pełna księgowość spółki z o.o." class="w-full h-full object-cover">
+              <span data-i18n="srv2_tag" class="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider text-slate-800 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-full shadow-xs border border-slate-200/60">Dla Spółek</span>
+            </div>
+            <div class="p-6">
+              <h3 data-i18n="srv2_title" class="text-xl font-bold text-slate-900 mb-2">Pełna Księgowość</h3>
+              <p data-i18n="srv2_desc" class="text-slate-600 text-xs sm:text-sm mb-4 leading-relaxed">
+                Prowadzenie ksiąg handlowych dla Spółek z o.o., komandytowych oraz innych podmiotów gospodarczych.
+              </p>
+              <ul class="text-xs text-slate-600 space-y-2 mb-2">
+                <li class="flex items-center gap-2"><span class="text-brand-600 font-bold">✓</span> <span data-i18n="srv2_f1">Prowadzenie pełnych ksiąg rachunkowych</span></li>
+                <li class="flex items-center gap-2"><span class="text-brand-600 font-bold">✓</span> <span data-i18n="srv2_f2">Roczne sprawozdania finansowe (e-KRS)</span></li>
+                <li class="flex items-center gap-2"><span class="text-brand-600 font-bold">✓</span> <span data-i18n="srv2_f3">Raportowanie dla zarządu i banków</span></li>
+              </ul>
+            </div>
           </div>
-          <a href="pelna-ksiegowosc-spolki.html" class="text-xs font-bold text-purple-700 hover:text-purple-900 flex items-center justify-between pt-4 border-t border-slate-100">
-            <span>Szczegóły pełnej księgowości</span>
-            <span>→</span>
-          </a>
+          <div class="px-6 pb-6 pt-0">
+            <a href="pelna-ksiegowosc-spolki.html" class="text-xs font-bold text-brand-600 hover:text-brand-800 flex items-center justify-between pt-4 border-t border-slate-100">
+              <span data-i18n="srv2_link">Szczegóły pełnej księgowości</span>
+              <span>→</span>
+            </a>
+          </div>
         </div>
 
-        <!-- KAFEL 3 -->
-        <div class="bg-white p-7 rounded-2xl border border-slate-200/90 shadow-sm flex flex-col justify-between card-hover">
+        <!-- KAFEL 3: KADRY -->
+        <div class="bg-white rounded-2xl border border-slate-200/90 shadow-sm flex flex-col justify-between overflow-hidden card-hover">
           <div>
-            <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded">Dla Pracodawców</span>
-            <h3 class="text-xl font-bold text-slate-900 mt-4 mb-2">Kadry i Płace</h3>
-            <p class="text-slate-600 text-xs sm:text-sm mb-4 leading-relaxed">
-              Zdejmujemy z Twojej głowy formalności związane z zatrudnianiem pracowników i rozliczeniami z ZUS.
-            </p>
-            <ul class="text-xs text-slate-600 space-y-2 mb-6">
-              <li class="flex items-center gap-2">✓ Listy płac, paski wynagrodzeń, ZUS</li>
-              <li class="flex items-center gap-2">✓ Umowy o pracę, zlecenia, o dzieło</li>
-              <li class="flex items-center gap-2">✓ Prowadzenie akt osobowych i PIT-11</li>
-            </ul>
+            <div class="img-zoom-container h-44 w-full bg-slate-100 relative">
+              <img src="assets/img/foto-kadry-place.jpg" alt="Kadry i płace Gdańsk" class="w-full h-full object-cover">
+              <span data-i18n="srv3_tag" class="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider text-slate-800 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-full shadow-xs border border-slate-200/60">Dla Pracodawców</span>
+            </div>
+            <div class="p-6">
+              <h3 data-i18n="srv3_title" class="text-xl font-bold text-slate-900 mb-2">Kadry i Płace</h3>
+              <p data-i18n="srv3_desc" class="text-slate-600 text-xs sm:text-sm mb-4 leading-relaxed">
+                Zdejmujemy z Twojej głowy formalności związane z zatrudnianiem pracowników i rozliczeniami z ZUS.
+              </p>
+              <ul class="text-xs text-slate-600 space-y-2 mb-2">
+                <li class="flex items-center gap-2"><span class="text-brand-600 font-bold">✓</span> <span data-i18n="srv3_f1">Listy płac, paski wynagrodzeń, ZUS</span></li>
+                <li class="flex items-center gap-2"><span class="text-brand-600 font-bold">✓</span> <span data-i18n="srv3_f2">Umowy o pracę, zlecenia, o dzieło</span></li>
+                <li class="flex items-center gap-2"><span class="text-brand-600 font-bold">✓</span> <span data-i18n="srv3_f3">Prowadzenie akt osobowych i PIT-11</span></li>
+              </ul>
+            </div>
           </div>
-          <a href="kadry-i-place.html" class="text-xs font-bold text-emerald-700 hover:text-emerald-900 flex items-center justify-between pt-4 border-t border-slate-100">
-            <span>Szczegóły obsługi kadr</span>
-            <span>→</span>
-          </a>
+          <div class="px-6 pb-6 pt-0">
+            <a href="kadry-i-place.html" class="text-xs font-bold text-brand-600 hover:text-brand-800 flex items-center justify-between pt-4 border-t border-slate-100">
+              <span data-i18n="srv3_link">Szczegóły obsługi kadr</span>
+              <span>→</span>
+            </a>
+          </div>
         </div>
       </div>
 
-      <!-- KAFLE KSEF + START FIRMY -->
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="bg-gradient-to-r from-brand-950 via-slate-900 to-slate-950 text-white p-7 sm:p-8 rounded-2xl shadow-md flex flex-col justify-between">
-          <div>
-            <div class="flex items-center gap-2 mb-3">
-              <span class="bg-brand-600 text-brand-100 text-[10px] uppercase font-bold px-2 py-0.5 rounded">Wymóg Prawny</span>
-              <span class="text-slate-300 text-xs">Krajowy System e-Faktur</span>
-            </div>
-            <h3 class="text-xl font-bold mb-2">Przygotujemy Twoją firmę na KSeF</h3>
-            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6">
-              Nadanie uprawnień, integracja oprogramowania, procedury wystawiania i odbioru faktur ustrukturyzowanych. Przejdź przez zmiany bez kar i przestojów.
-            </p>
-          </div>
-          <a href="ksef.html" class="inline-flex items-center justify-between bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold px-4 py-3 rounded-xl transition">
-            <span>Dowiedz się, jak wdrożyć KSeF</span>
-            <span>→</span>
-          </a>
+      <!-- DODATKOWE USŁUGI: KSEF I REJESTRACJA FIRMY (CZYSTY, SPOKOJNY PASEK) -->
+      <div class="mt-8 bg-white border border-slate-200/90 rounded-2xl p-6 sm:p-7 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xs">
+        <div class="space-y-1 text-center md:text-left">
+          <h4 class="text-base font-bold text-slate-900">
+            Wdrażasz KSeF lub dopiero zakładasz nową firmę?
+          </h4>
+          <p class="text-xs sm:text-sm text-slate-600">
+            Pomagamy w bezpiecznym wdrożeniu e-faktur KSeF oraz bezpłatnie przeprowadzamy przez procedurę rejestracji CEIDG i spółek w S24.
+          </p>
         </div>
-
-        <div class="bg-amber-50/80 border border-amber-200/90 p-7 sm:p-8 rounded-2xl shadow-sm flex flex-col justify-between">
-          <div>
-            <div class="flex items-center gap-2 mb-3">
-              <span class="bg-amber-200 text-amber-900 text-[10px] uppercase font-bold px-2 py-0.5 rounded">Start Biznesu</span>
-              <span class="text-amber-800 text-xs">Darmowe wsparcie na start</span>
-            </div>
-            <h3 class="text-xl font-bold text-slate-900 mb-2">Zakładasz nową firmę w Gdańsku?</h3>
-            <p class="text-slate-700 text-xs sm:text-sm leading-relaxed mb-6">
-              Pomożemy Ci zarejestrować działalność w CEIDG lub spółkę w S24, dobrać kody PKD oraz najkorzystniejszą formę podatku. <strong>0 zł przy umowie o obsługę.</strong>
-            </p>
-          </div>
-          <a href="rejestracja-firmy.html" class="inline-flex items-center justify-between bg-amber-600 hover:bg-amber-700 text-white text-xs font-semibold px-4 py-3 rounded-xl transition">
-            <span>Skonsultuj założenie firmy</span>
-            <span>→</span>
+        <div class="flex flex-wrap items-center justify-center gap-3 shrink-0">
+          <a href="ksef.html" data-i18n="nav_ksef" class="bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-semibold px-4 py-2.5 rounded-xl transition">
+            Wdrożenie KSeF →
+          </a>
+          <a href="rejestracja-firmy.html" data-i18n="nav_rejestracja" class="bg-brand-50 hover:bg-brand-100 text-brand-700 text-xs font-semibold px-4 py-2.5 rounded-xl transition">
+            Zakładanie firmy za 0 zł →
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 4. KALKULATOR SZYBKIEJ WYCENY -->
-  <section id="wycena" class="py-16 sm:py-20 bg-gradient-to-br from-brand-950 via-slate-900 to-slate-950 text-white relative">
+  <!-- 4. KALKULATOR SZYBKIEJ WYCENY (CZYSTA, JASNA, SPOKOJNA ESTETYKA) -->
+  <section id="wycena" class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200/80">
     <div class="max-w-4xl mx-auto px-4">
       <div class="text-center mb-10">
-        <span class="text-brand-300 text-xs uppercase font-bold tracking-wider">Kalkulator Orientacyjny</span>
-        <h2 class="text-2xl sm:text-3xl font-bold mt-1">Oblicz koszt księgowości dla Twojej firmy</h2>
-        <p class="text-slate-300 text-xs sm:text-sm mt-2 max-w-xl mx-auto">
+        <span data-i18n="calc_tag" class="text-brand-600 text-xs uppercase font-bold tracking-wider">Kalkulator Orientacyjny</span>
+        <h2 data-i18n="calc_title" class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Oblicz koszt księgowości dla Twojej firmy</h2>
+        <p data-i18n="calc_sub" class="text-slate-600 text-xs sm:text-sm mt-2 max-w-xl mx-auto">
           Zaznacz parametry swojego biznesu, sprawdź szacunkowy koszt i wyślij formularz, aby otrzymać precyzyjną, niezobowiązującą ofertę w 24h.
         </p>
       </div>
 
-      <div class="bg-white text-slate-900 p-6 sm:p-9 rounded-3xl shadow-2xl">
+      <div class="bg-white text-slate-900 p-6 sm:p-9 rounded-3xl border border-slate-200/90 shadow-sm">
         <form id="pricing-calculator-form" class="space-y-6">
           
           <!-- KROK 1 -->
           <div>
-            <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2.5">
+            <label data-i18n="calc_step1" class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2.5">
               1. Forma prawna Twojej działalności:
             </label>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
-              <button type="button" data-value="jdg" class="calc-entity-btn py-3 px-3 border-2 border-brand-600 bg-brand-50 text-brand-900 font-bold rounded-xl text-xs text-center transition">
+              <button type="button" data-value="jdg" data-i18n="calc_e1" class="calc-entity-btn py-3 px-3 border-2 border-brand-600 bg-brand-50 text-brand-900 font-bold rounded-xl text-xs text-center transition">
                 Jednoosobowa (JDG / B2B)
               </button>
-              <button type="button" data-value="spolka" class="calc-entity-btn py-3 px-3 border border-slate-200 hover:border-slate-300 text-slate-700 rounded-xl text-xs text-center transition">
+              <button type="button" data-value="spolka" data-i18n="calc_e2" class="calc-entity-btn py-3 px-3 border border-slate-200 hover:border-slate-300 text-slate-700 rounded-xl text-xs text-center transition">
                 Spółka z o.o. / Komandytowa
               </button>
-              <button type="button" data-value="new" class="calc-entity-btn py-3 px-3 border border-slate-200 hover:border-slate-300 text-slate-700 rounded-xl text-xs text-center transition">
+              <button type="button" data-value="new" data-i18n="calc_e3" class="calc-entity-btn py-3 px-3 border border-slate-200 hover:border-slate-300 text-slate-700 rounded-xl text-xs text-center transition">
                 Dopiero planuję założyć firmę
               </button>
             </div>
@@ -421,36 +507,36 @@
 
           <!-- KROK 2 -->
           <div>
-            <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2.5">
+            <label data-i18n="calc_step2" class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2.5">
               2. Szacowana liczba dokumentów kosztowych i przychodowych miesięcznie:
             </label>
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
-              <button type="button" data-value="0-10" class="calc-doc-btn py-2.5 border border-slate-200 text-slate-700 rounded-lg text-xs text-center">Do 10 szt.</button>
-              <button type="button" data-value="10-30" class="calc-doc-btn py-2.5 border-2 border-brand-600 bg-brand-50 text-brand-900 font-bold rounded-lg text-xs text-center">11 – 30 szt.</button>
-              <button type="button" data-value="31-60" class="calc-doc-btn py-2.5 border border-slate-200 text-slate-700 rounded-lg text-xs text-center">31 – 60 szt.</button>
-              <button type="button" data-value="60+" class="calc-doc-btn py-2.5 border border-slate-200 text-slate-700 rounded-lg text-xs text-center">Powyżej 60</button>
+              <button type="button" data-value="0-10" data-i18n="calc_d1" class="calc-doc-btn py-2.5 border border-slate-200 text-slate-700 rounded-lg text-xs text-center">Do 10 szt.</button>
+              <button type="button" data-value="10-30" data-i18n="calc_d2" class="calc-doc-btn py-2.5 border-2 border-brand-600 bg-brand-50 text-brand-900 font-bold rounded-lg text-xs text-center">11 – 30 szt.</button>
+              <button type="button" data-value="31-60" data-i18n="calc_d3" class="calc-doc-btn py-2.5 border border-slate-200 text-slate-700 rounded-lg text-xs text-center">31 – 60 szt.</button>
+              <button type="button" data-value="60+" data-i18n="calc_d4" class="calc-doc-btn py-2.5 border border-slate-200 text-slate-700 rounded-lg text-xs text-center">Powyżej 60</button>
             </div>
           </div>
 
           <!-- KROK 3 -->
           <div>
-            <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2.5">
+            <label data-i18n="calc_step3" class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2.5">
               3. Liczba zatrudnionych pracowników / zleceniobiorców:
             </label>
             <div class="grid grid-cols-3 gap-2.5">
-              <button type="button" data-value="0" class="calc-emp-btn py-2.5 border-2 border-brand-600 bg-brand-50 text-brand-900 font-bold rounded-lg text-xs text-center">Tylko właściciel (0)</button>
-              <button type="button" data-value="1-3" class="calc-emp-btn py-2.5 border border-slate-200 text-slate-700 rounded-lg text-xs text-center">1 – 3 pracowników</button>
-              <button type="button" data-value="4+" class="calc-emp-btn py-2.5 border border-slate-200 text-slate-700 rounded-lg text-xs text-center">4 i więcej</button>
+              <button type="button" data-value="0" data-i18n="calc_emp0" class="calc-emp-btn py-2.5 border-2 border-brand-600 bg-brand-50 text-brand-900 font-bold rounded-lg text-xs text-center">Tylko właściciel (0)</button>
+              <button type="button" data-value="1-3" data-i18n="calc_emp1" class="calc-emp-btn py-2.5 border border-slate-200 text-slate-700 rounded-lg text-xs text-center">1 – 3 pracowników</button>
+              <button type="button" data-value="4+" data-i18n="calc_emp2" class="calc-emp-btn py-2.5 border border-slate-200 text-slate-700 rounded-lg text-xs text-center">4 i więcej</button>
             </div>
           </div>
 
           <!-- WYNIK SZACOWANY -->
           <div id="calc-estimate-result" class="bg-brand-50/70 border border-brand-200 rounded-xl p-4 flex flex-col sm:flex-row justify-between items-center gap-3">
             <div>
-              <p class="text-xs text-slate-600">Szacowany koszt miesięcznej obsługi:</p>
+              <p data-i18n="calc_est_label" class="text-xs text-slate-600">Szacowany koszt miesięcznej obsługi:</p>
               <p id="estimate-price" class="text-lg font-bold text-slate-900">od ok. <span class="text-brand-600 text-2xl font-black">350 zł</span> netto / mc</p>
             </div>
-            <p class="text-[11px] text-slate-500 max-w-xs text-center sm:text-right">
+            <p data-i18n="calc_disclaimer" class="text-[11px] text-slate-500 max-w-xs text-center sm:text-right">
               Ostateczna cena zależy m.in. od specyfiki transakcji (np. handel zagraniczny) i jest potwierdzana po bezpłatnej rozmowie.
             </p>
           </div>
@@ -458,21 +544,21 @@
           <!-- DANE KONTAKTOWE -->
           <div class="grid sm:grid-cols-2 gap-4 pt-2">
             <div>
-              <label class="block text-xs font-semibold text-slate-700 mb-1">Twój numer telefonu (wymagany)</label>
+              <label data-i18n="calc_phone_lbl" class="block text-xs font-semibold text-slate-700 mb-1">Twój numer telefonu (wymagany)</label>
               <input type="tel" required placeholder="np. 503 123 456" class="w-full text-xs p-3.5 border border-slate-300 rounded-xl focus:ring-2 focus:ring-brand-600 focus:outline-none">
             </div>
             <div>
-              <label class="block text-xs font-semibold text-slate-700 mb-1">Twój adres e-mail (wymagany)</label>
+              <label data-i18n="calc_email_lbl" class="block text-xs font-semibold text-slate-700 mb-1">Twój adres e-mail (wymagany)</label>
               <input type="email" required placeholder="twoj@email.pl" class="w-full text-xs p-3.5 border border-slate-300 rounded-xl focus:ring-2 focus:ring-brand-600 focus:outline-none">
             </div>
           </div>
 
-          <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-4 rounded-xl shadow-md transition text-sm flex items-center justify-center gap-2">
+          <button type="submit" data-i18n="calc_submit_btn" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-4 rounded-xl shadow-md transition text-sm flex items-center justify-center gap-2">
             <span>Odbierz bezpłatną propozycję i wycenę w 24h</span>
             <span>→</span>
           </button>
           
-          <p class="text-[11px] text-slate-400 text-center">
+          <p data-i18n="calc_privacy" class="text-[11px] text-slate-400 text-center">
             🔒 Szanujemy Twoją prywatność. Żadnego spamu – kontaktujemy się wyłącznie w celu przedstawienia wyceny.
           </p>
         </form>
@@ -485,42 +571,63 @@
     <div class="max-w-6xl mx-auto px-4">
       <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-10 gap-3">
         <div>
-          <span class="text-xs font-bold uppercase tracking-wider text-brand-600">Prawdziwy Dowód Społeczny</span>
-          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Co mówią o nas nasi Klienci?</h2>
+          <span data-i18n="rev_tag" class="text-xs font-bold uppercase tracking-wider text-brand-600">Prawdziwy Dowód Społeczny</span>
+          <h2 data-i18n="rev_title" class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Co mówią o nas nasi Klienci?</h2>
         </div>
-        <a href="opinie.html" class="text-xs font-bold text-brand-600 hover:underline flex items-center gap-1">
+        <a href="opinie.html" data-i18n="rev_link" class="text-xs font-bold text-brand-600 hover:underline flex items-center gap-1">
           Zobacz wszystkie referencje i opinie Google →
         </a>
       </div>
 
       <div class="grid md:grid-cols-3 gap-6">
-        <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50 flex flex-col justify-between">
-          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed italic mb-6">
-            „Za lata ciepłej współpracy przy realizacji największego projektu badawczego w kraju, współpracy w poczuciu pełnej odpowiedzialności i rzetelności, za uśmiech i życzliwość do ludzi, a przede wszystkim za fachowość i kompetencje zawodowe.”
-          </p>
+        <!-- OPINIA 1: IMP PAN -->
+        <div class="p-6 rounded-2xl border border-slate-200 bg-white flex flex-col justify-between card-hover shadow-xs">
           <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="text-amber-500 text-sm">★★★★★</div>
+              <img src="assets/img/logo-imp-pan.png" alt="Instytut Maszyn Przepływowych PAN" class="h-8 w-auto object-contain">
+            </div>
+            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed italic mb-6">
+              „Za lata ciepłej współpracy przy realizacji największego projektu badawczego w kraju, współpracy w poczuciu pełnej odpowiedzialności i rzetelności, za uśmiech i życzliwość do ludzi, a przede wszystkim za fachowość i kompetencje zawodowe.”
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100">
             <p class="font-bold text-slate-900 text-xs sm:text-sm">Jan Kiciński</p>
-            <p class="text-[11px] text-slate-500">Dyrektor IMP PAN (Polska Akademia Nauk)</p>
+            <p class="text-[11px] text-slate-500">Dyrektor Instytutu Maszyn Przepływowych PAN</p>
           </div>
         </div>
 
-        <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50 flex flex-col justify-between">
-          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed italic mb-6">
-            „Pragnę polecić współpracę z Biurem Rachunkowym Trzebiatowska, które świadczy dla nas usługę z zakresu rachunkowości i księgowości oraz reprezentuje nas we wszystkich formalnościach związanych z ZUS i urzędem skarbowym.”
-          </p>
+        <!-- OPINIA 2: DAMAR -->
+        <div class="p-6 rounded-2xl border border-slate-200 bg-white flex flex-col justify-between card-hover shadow-xs">
           <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="text-amber-500 text-sm">★★★★★</div>
+              <img src="assets/img/logo-damar.jpg" alt="Damar Sp. z o.o." class="h-8 w-auto object-contain rounded">
+            </div>
+            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed italic mb-6">
+              „Pragnę polecić współpracę z Biurem Rachunkowym Trzebiatowska, które świadczy dla nas usługę z zakresu rachunkowości i księgowości oraz reprezentuje nas we wszystkich formalnościach związanych z ZUS i urzędem skarbowym.”
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100">
             <p class="font-bold text-slate-900 text-xs sm:text-sm">Arkadiusz Borejszo</p>
-            <p class="text-[11px] text-slate-500">Prezes Zarządu</p>
+            <p class="text-[11px] text-slate-500">Prezes Zarządu Damar Sp. z o.o.</p>
           </div>
         </div>
 
-        <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50 flex flex-col justify-between">
-          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed italic mb-6">
-            „Pracę Pani Katarzyny charakteryzowała sumienność i zaangażowanie w realizowane projekty. Przejawiała inicjatywę i kreatywność w nowych rozwiązaniach. Gorąco polecam!”
-          </p>
+        <!-- OPINIA 3: SOSNOWSKI -->
+        <div class="p-6 rounded-2xl border border-slate-200 bg-white flex flex-col justify-between card-hover shadow-xs">
           <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="text-amber-500 text-sm">★★★★★</div>
+              <img src="assets/img/logo-sosnowski.png" alt="ZUH Sosnowski" class="h-8 w-auto object-contain">
+            </div>
+            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed italic mb-6">
+              „Pracę Pani Katarzyny charakteryzowała sumienność i zaangażowanie w realizowane projekty. Przejawiała inicjatywę i kreatywność w nowych rozwiązaniach. Gorąco polecam!”
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-100">
             <p class="font-bold text-slate-900 text-xs sm:text-sm">Rafał Sosnowski</p>
-            <p class="text-[11px] text-slate-500">Prezes Zarządu ZUH Sosnowski</p>
+            <p class="text-[11px] text-slate-500">Prezes Zarządu ZUH Sosnowski Sp. z o.o.</p>
           </div>
         </div>
       </div>
@@ -531,37 +638,37 @@
   <section class="py-14 sm:py-16 bg-slate-50">
     <div class="max-w-4xl mx-auto px-4">
       <div class="text-center mb-10">
-        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Często zadawane pytania (FAQ)</h2>
-        <p class="text-slate-600 text-xs sm:text-sm mt-1.5">Odpowiedzi na najczęstsze wątpliwości przed podjęciem współpracy.</p>
+        <h2 data-i18n="faq_title" class="text-2xl sm:text-3xl font-bold text-slate-900">Często zadawane pytania (FAQ)</h2>
+        <p data-i18n="faq_sub" class="text-slate-600 text-xs sm:text-sm mt-1.5">Odpowiedzi na najczęstsze wątpliwości przed podjęciem współpracy.</p>
       </div>
 
       <div class="space-y-3">
         <div class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden shadow-xs">
           <button class="faq-trigger w-full px-5 py-4 text-left font-bold text-xs sm:text-sm text-slate-900 flex justify-between items-center">
-            <span>Jak wygląda zmiana biura rachunkowego w trakcie roku?</span>
+            <span data-i18n="faq_q1">Jak wygląda zmiana biura rachunkowego w trakcie roku?</span>
             <span class="faq-icon text-slate-400 font-bold transition">▼</span>
           </button>
-          <div class="faq-content hidden px-5 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+          <div data-i18n="faq_a1" class="faq-content hidden px-5 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
             Zmiana biura w trakcie roku obrotowego jest całkowicie bezproblemowa. Pomagamy we wszystkich formalnościach – sporządzamy protokół przejęcia dokumentacji od poprzedniej księgowej i weryfikujemy ciągłość zapisów, dzięki czemu proces odbywa się bez stresu dla Twojej firmy.
           </div>
         </div>
 
         <div class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden shadow-xs">
           <button class="faq-trigger w-full px-5 py-4 text-left font-bold text-xs sm:text-sm text-slate-900 flex justify-between items-center">
-            <span>Czy muszę przyjeżdżać do biura osobiście z papierowymi dokumentami?</span>
+            <span data-i18n="faq_q2">Czy muszę przyjeżdżać do biura osobiście z papierowymi dokumentami?</span>
             <span class="faq-icon text-slate-400 font-bold transition">▼</span>
           </button>
-          <div class="faq-content hidden px-5 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
-            Nie! Działamy w 100% cyfrowo. Dokumenty możesz przesyłać jako skany, pliki PDF lub zdjęcia robione smartfonem przez dedykowaną aplikację. Oczywiście jeśli wolisz tradycyjne spotkania – nasze biuro na Przymorzu jest zawsze otwarte na spotkanie przy kawie.
+          <div data-i18n="faq_a2" class="faq-content hidden px-5 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+            Nie! Działamy w 100% cyfrowo. Dokumenty możesz przesyłać e-mailem jako pliki PDF lub czytelne skany. Oczywiście jeśli wolisz tradycyjne spotkania – nasze biuro na Przymorzu jest zawsze otwarte na spotkanie przy kawie.
           </div>
         </div>
 
         <div class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden shadow-xs">
           <button class="faq-trigger w-full px-5 py-4 text-left font-bold text-xs sm:text-sm text-slate-900 flex justify-between items-center">
-            <span>W jaki sposób biuro pomaga przy wdrożeniu KSeF?</span>
+            <span data-i18n="faq_q3">W jaki sposób biuro pomaga przy wdrożeniu KSeF?</span>
             <span class="faq-icon text-slate-400 font-bold transition">▼</span>
           </button>
-          <div class="faq-content hidden px-5 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+          <div data-i18n="faq_a3" class="faq-content hidden px-5 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
             Przeprowadzamy naszych klientów przez cały proces: od nadania uprawnień w Urzędzie Skarbowym (formularz ZAW-FA), przez dobór narzędzia do wystawiania e-faktur, aż po bieżącą weryfikację faktur ustrukturyzowanych w systemie rządowym.
           </div>
         </div>
@@ -576,7 +683,7 @@
         <div class="bg-white p-2 rounded-xl inline-block mb-3">
           <img src="assets/img/logo-default.png" alt="Biuro Rachunkowe Trzebiatowska" class="h-9 w-auto">
         </div>
-        <p class="text-slate-400 leading-relaxed mb-4 text-[11px]">
+        <p data-i18n="footer_desc" class="text-slate-400 leading-relaxed mb-4 text-[11px]">
           Profesjonalne usługi księgowe i kadrowo-płacowe w Gdańsku na Przymorzu. Licencja Ministerstwa Finansów nr 28310. Ubezpieczenie w Lloyd's.
         </p>
         <span class="inline-block bg-slate-800 text-amber-400 font-bold px-2.5 py-1 rounded text-[10px]">
@@ -585,29 +692,29 @@
       </div>
 
       <div>
-        <p class="text-white font-semibold mb-3">Nawigacja</p>
+        <p data-i18n="footer_nav_hdr" class="text-white font-semibold mb-3">Nawigacja</p>
         <ul class="space-y-2 text-[11px]">
-          <li><a href="o-biurze.html" class="hover:text-white transition">O biurze</a></li>
-          <li><a href="certyfikaty.html" class="hover:text-white transition">Certyfikaty i polisa OC</a></li>
-          <li><a href="jak-pracujemy.html" class="hover:text-white transition">Jak pracujemy (obieg online)</a></li>
-          <li><a href="opinie.html" class="hover:text-white transition">Referencje i opinie</a></li>
-          <li><a href="kontakt.html" class="hover:text-white transition">Kontakt i dojazd</a></li>
+          <li><a href="o-biurze.html" data-i18n="nav_about" class="hover:text-white transition">O biurze</a></li>
+          <li><a href="certyfikaty.html" data-i18n="nav_certificates" class="hover:text-white transition">Certyfikaty i polisa OC</a></li>
+          <li><a href="jak-pracujemy.html" data-i18n="nav_how_we_work" class="hover:text-white transition">Jak pracujemy (obieg online)</a></li>
+          <li><a href="opinie.html" data-i18n="nav_reviews" class="hover:text-white transition">Referencje i opinie</a></li>
+          <li><a href="kontakt.html" data-i18n="nav_contact" class="hover:text-white transition">Kontakt i dojazd</a></li>
         </ul>
       </div>
 
       <div>
-        <p class="text-white font-semibold mb-3">Oferta</p>
+        <p data-i18n="footer_offer_hdr" class="text-white font-semibold mb-3">Oferta</p>
         <ul class="space-y-2 text-[11px]">
-          <li><a href="ksiegowosc-jdg.html" class="hover:text-white transition">Księgowość JDG i B2B</a></li>
-          <li><a href="pelna-ksiegowosc-spolki.html" class="hover:text-white transition">Pełna Księgowość (Spółki)</a></li>
-          <li><a href="kadry-i-place.html" class="hover:text-white transition">Kadry i Płace</a></li>
-          <li><a href="ksef.html" class="text-brand-300 hover:text-white font-semibold transition">Wdrożenie KSeF</a></li>
-          <li><a href="rejestracja-firmy.html" class="hover:text-white transition">Zakładanie firmy za 0 zł</a></li>
+          <li><a href="ksiegowosc-jdg.html" data-i18n="nav_jdg" class="hover:text-white transition">Księgowość JDG i B2B</a></li>
+          <li><a href="pelna-ksiegowosc-spolki.html" data-i18n="nav_spolki" class="hover:text-white transition">Pełna Księgowość (Spółki)</a></li>
+          <li><a href="kadry-i-place.html" data-i18n="nav_kadry" class="hover:text-white transition">Kadry i Płace</a></li>
+          <li><a href="ksef.html" data-i18n="nav_ksef" class="text-brand-300 hover:text-white font-semibold transition">Wdrożenie KSeF</a></li>
+          <li><a href="rejestracja-firmy.html" data-i18n="nav_rejestracja" class="hover:text-white transition">Zakładanie firmy za 0 zł</a></li>
         </ul>
       </div>
 
       <div>
-        <p class="text-white font-semibold mb-3">Kontakt</p>
+        <p data-i18n="footer_contact_hdr" class="text-white font-semibold mb-3">Kontakt</p>
         <ul class="space-y-2 text-[11px]">
           <li class="text-slate-300">📍 ul. Piastowska 89, II piętro<br>80-363 Gdańsk Przymorze</li>
           <li>📞 <a href="tel:+48503596811" class="text-white font-bold hover:underline">+48 503 59 68 11</a></li>
@@ -618,21 +725,22 @@
     </div>
 
     <div class="max-w-6xl mx-auto px-4 pt-6 border-t border-slate-800 text-[11px] flex flex-col sm:flex-row justify-between items-center gap-3 text-slate-500">
-      <p>© 2026 Biuro Rachunkowe Trzebiatowska. Wszystkie prawa zastrzeżone.</p>
+      <p data-i18n="footer_rights">© 2026 Biuro Rachunkowe Trzebiatowska. Wszystkie prawa zastrzeżone.</p>
       <p>Gdańsk Przymorze • Bezpieczeństwo • Terminowość</p>
     </div>
   </footer>
 
   <!-- MOBILE STICKY BAR -->
   <div class="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 p-2 flex gap-2 z-50 shadow-lg">
-    <a href="tel:+48503596811" class="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 px-3 rounded-xl text-center text-xs flex items-center justify-center gap-1.5 shadow-sm">
+    <a href="tel:+48503596811" data-i18n="mobile_call_now" class="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 px-3 rounded-xl text-center text-xs flex items-center justify-center gap-1.5 shadow-sm">
       📞 Zadzwoń teraz
     </a>
-    <a href="#wycena" class="flex-1 bg-brand-600 hover:bg-brand-700 text-white font-bold py-2.5 px-3 rounded-xl text-center text-xs flex items-center justify-center gap-1.5 shadow-sm">
+    <a href="#wycena" data-i18n="mobile_quote_btn" class="flex-1 bg-brand-600 hover:bg-brand-700 text-white font-bold py-2.5 px-3 rounded-xl text-center text-xs flex items-center justify-center gap-1.5 shadow-sm">
       ☕ Szybka wycena
     </a>
   </div>
 
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/i18n.js"></script>
 </body>
 </html>

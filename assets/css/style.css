@@ -60,3 +60,43 @@ body {
 .bg-brand-gradient {
   background: linear-gradient(135deg, #2e0821 0%, #1e1b2e 50%, #0f172a 100%);
 }
+
+/* Efekty zdjęć i miniatur */
+.img-zoom-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.img-zoom-container img {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.img-zoom-container:hover img {
+  transform: scale(1.04);
+}
+
+/* Certyfikaty z efektem powiększenia */
+.cert-card {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.cert-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px -8px rgba(168, 38, 130, 0.12), 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Lightbox dla certyfikatów */
+#cert-lightbox {
+  transition: opacity 0.25s ease;
+}
+
+#cert-lightbox.hidden {
+  display: none;
+  opacity: 0;
+}
+
+#cert-lightbox:not(.hidden) {
+  display: flex;
+  opacity: 1;
+}

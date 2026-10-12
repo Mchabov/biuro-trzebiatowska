@@ -37,55 +37,76 @@
   <header class="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
     <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
       <div class="flex items-center space-x-4 sm:space-x-6 text-[11px] sm:text-xs">
-        <span class="flex items-center gap-1.5">📍 ul. Piastowska 89, Gdańsk Przymorze</span>
+        <span data-i18n="top_address" class="flex items-center gap-1.5">📍 ul. Piastowska 89, Gdańsk Przymorze</span>
         <span class="hidden md:inline text-slate-500">|</span>
-        <span class="hidden md:inline">⏰ Pn – Pt: 8:00 – 16:00</span>
+        <span data-i18n="top_hours" class="hidden md:inline">⏰ Pn – Pt: 8:00 – 16:00</span>
       </div>
-      <div class="flex items-center space-x-4 text-[11px] sm:text-xs font-medium">
+      <div class="flex items-center space-x-3 sm:space-x-4 text-[11px] sm:text-xs font-medium">
         <a href="tel:+48503596811" class="text-amber-400 hover:text-amber-300 transition flex items-center gap-1">📞 +48 503 59 68 11</a>
         <span class="text-slate-700">|</span>
         <a href="mailto:kontakt@biurotrzebiatowska.pl" class="hover:text-white transition">✉ kontakt@biurotrzebiatowska.pl</a>
+        <span class="text-slate-700">|</span>
+        
+        <!-- PRZEŁĄCZNIK JĘZYKA W TOP BARZE -->
+        <div class="inline-flex items-center bg-slate-800 rounded-lg p-0.5 border border-slate-700 text-[10px]">
+          <button type="button" data-lang="pl" class="lang-toggle-btn px-2 py-0.5 rounded transition font-bold bg-brand-600 text-white flex items-center gap-1">
+            <span>🇵🇱</span> <span>PL</span>
+          </button>
+          <button type="button" data-lang="en" class="lang-toggle-btn px-2 py-0.5 rounded transition text-slate-400 hover:text-white flex items-center gap-1">
+            <span>🇬🇧</span> <span>EN</span>
+          </button>
+        </div>
       </div>
     </div>
   </header>
 
   <!-- NAVBAR -->
   <nav class="bg-white shadow-sm sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-4 py-3.5 flex justify-between items-center">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
       <a href="index.html" class="flex items-center gap-3">
         <img src="assets/img/logo-default.png" alt="Biuro Rachunkowe Trzebiatowska" class="h-10 sm:h-12 w-auto object-contain">
       </a>
 
       <!-- MENU DESKTOP -->
-      <div class="hidden lg:flex items-center space-x-7 text-sm font-medium text-slate-700">
-        <a href="index.html" class="nav-link hover:text-brand-600 transition">Strona Główna</a>
-        <a href="o-biurze.html" class="nav-link active text-brand-600 font-semibold">O biurze</a>
-        <a href="certyfikaty.html" class="nav-link hover:text-brand-600 transition">Certyfikaty</a>
+      <div class="hidden lg:flex items-center space-x-6 text-sm font-medium text-slate-700">
+        <a href="index.html" data-i18n="nav_home" class="nav-link hover:text-brand-600 transition">Strona Główna</a>
+        <a href="o-biurze.html" data-i18n="nav_about" class="nav-link active text-brand-600 font-semibold">O biurze</a>
+        <a href="certyfikaty.html" data-i18n="nav_certificates" class="nav-link hover:text-brand-600 transition">Certyfikaty</a>
         
         <!-- DROPDOWN OFERTA -->
         <div class="relative group py-2">
           <button class="nav-link hover:text-brand-600 transition flex items-center gap-1">
-            Oferta <span class="text-[10px]">▼</span>
+            <span data-i18n="nav_offer">Oferta</span> <span class="text-[10px]">▼</span>
           </button>
           <div class="absolute left-0 top-full hidden group-hover:block bg-white border border-slate-200 shadow-xl rounded-xl py-2 w-64 z-50">
-            <a href="ksiegowosc-jdg.html" class="block px-4 py-2 text-xs text-slate-700 hover:bg-brand-50 hover:text-brand-600 font-medium">Księgowość JDG i B2B</a>
-            <a href="pelna-ksiegowosc-spolki.html" class="block px-4 py-2 text-xs text-slate-700 hover:bg-brand-50 hover:text-brand-600 font-medium">Pełna Księgowość (Spółki z o.o.)</a>
-            <a href="kadry-i-place.html" class="block px-4 py-2 text-xs text-slate-700 hover:bg-brand-50 hover:text-brand-600 font-medium">Kadry i Płace</a>
+            <a href="ksiegowosc-jdg.html" data-i18n="nav_jdg" class="block px-4 py-2 text-xs text-slate-700 hover:bg-brand-50 hover:text-brand-600 font-medium">Księgowość JDG i B2B</a>
+            <a href="pelna-ksiegowosc-spolki.html" data-i18n="nav_spolki" class="block px-4 py-2 text-xs text-slate-700 hover:bg-brand-50 hover:text-brand-600 font-medium">Pełna Księgowość (Spółki z o.o.)</a>
+            <a href="kadry-i-place.html" data-i18n="nav_kadry" class="block px-4 py-2 text-xs text-slate-700 hover:bg-brand-50 hover:text-brand-600 font-medium">Kadry i Płace</a>
             <div class="border-t border-slate-100 my-1"></div>
             <a href="ksef.html" class="block px-4 py-2 text-xs text-brand-800 bg-brand-50/50 hover:bg-brand-100 font-semibold flex items-center justify-between">
-              Wdrożenie KSeF <span class="text-[9px] bg-brand-600 text-white px-1.5 py-0.5 rounded">Nowość</span>
+              <span data-i18n="nav_ksef">Wdrożenie KSeF</span> <span data-i18n="nav_ksef_badge" class="text-[9px] bg-brand-600 text-white px-1.5 py-0.5 rounded">Nowość</span>
             </a>
-            <a href="rejestracja-firmy.html" class="block px-4 py-2 text-xs text-slate-700 hover:bg-brand-50 hover:text-brand-600 font-medium">Zakładanie firmy za 0 zł</a>
+            <a href="rejestracja-firmy.html" data-i18n="nav_rejestracja" class="block px-4 py-2 text-xs text-slate-700 hover:bg-brand-50 hover:text-brand-600 font-medium">Zakładanie firmy za 0 zł</a>
           </div>
         </div>
 
-        <a href="jak-pracujemy.html" class="nav-link hover:text-brand-600 transition">Jak pracujemy</a>
-        <a href="opinie.html" class="nav-link hover:text-brand-600 transition">Opinie</a>
-        <a href="kontakt.html" class="nav-link hover:text-brand-600 transition">Kontakt</a>
+        <a href="jak-pracujemy.html" data-i18n="nav_how_we_work" class="nav-link hover:text-brand-600 transition">Jak pracujemy</a>
+        <a href="opinie.html" data-i18n="nav_reviews" class="nav-link hover:text-brand-600 transition">Opinie</a>
+        <a href="kontakt.html" data-i18n="nav_contact" class="nav-link hover:text-brand-600 transition">Kontakt</a>
       </div>
 
       <div class="hidden sm:flex items-center gap-3">
-        <a href="kontakt.html#formularz" class="bg-brand-600 hover:bg-brand-700 text-white text-xs font-semibold px-4 py-2.5 rounded-lg shadow-sm transition">
+        <!-- PRZEŁĄCZNIK JĘZYKA W NAVBARZE -->
+        <div class="inline-flex items-center bg-slate-100 rounded-xl p-1 border border-slate-200 text-xs">
+          <button type="button" data-lang="pl" class="lang-toggle-btn px-2.5 py-1 rounded-lg transition font-bold bg-brand-600 text-white shadow-xs flex items-center gap-1.5">
+            <span>🇵🇱</span> <span>PL</span>
+          </button>
+          <button type="button" data-lang="en" class="lang-toggle-btn px-2.5 py-1 rounded-lg transition text-slate-600 hover:text-slate-900 flex items-center gap-1.5">
+            <span>🇬🇧</span> <span>EN</span>
+          </button>
+        </div>
+
+        <a href="kontakt.html" data-i18n="nav_consultation_btn" class="bg-brand-600 hover:bg-brand-700 text-white text-xs font-semibold px-4 py-2.5 rounded-xl shadow-xs transition">
           Bezpłatna konsultacja
         </a>
       </div>
@@ -97,20 +118,30 @@
 
     <!-- MENU MOBILNE -->
     <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-2 text-sm">
-      <a href="index.html" class="block py-2 text-slate-700">Strona Główna</a>
-      <a href="o-biurze.html" class="block py-2 text-brand-600 font-semibold">O biurze i doświadczenie</a>
-      <a href="certyfikaty.html" class="block py-2 text-slate-700">Certyfikaty i polisa OC</a>
-      <div class="py-1 pl-3 border-l-2 border-brand-200 space-y-2 text-xs">
-        <p class="font-bold text-slate-400 uppercase tracking-wider text-[10px]">Oferta:</p>
-        <a href="ksiegowosc-jdg.html" class="block py-1 text-slate-700">Księgowość JDG i B2B</a>
-        <a href="pelna-ksiegowosc-spolki.html" class="block py-1 text-slate-700">Pełna Księgowość (Spółki)</a>
-        <a href="kadry-i-place.html" class="block py-1 text-slate-700">Kadry i Płace</a>
-        <a href="ksef.html" class="block py-1 text-brand-600 font-semibold">Wdrożenie KSeF</a>
-        <a href="rejestracja-firmy.html" class="block py-1 text-slate-700">Zakładanie firmy za 0 zł</a>
+      <div class="flex items-center justify-between bg-slate-50 p-2.5 rounded-xl border border-slate-200 mb-3">
+        <span class="text-xs font-semibold text-slate-700">Język / Language:</span>
+        <div class="inline-flex items-center bg-white rounded-lg p-0.5 border border-slate-200 text-xs">
+          <button type="button" data-lang="pl" class="lang-toggle-btn px-3 py-1 rounded-md transition font-bold bg-brand-600 text-white">🇵🇱 PL</button>
+          <button type="button" data-lang="en" class="lang-toggle-btn px-3 py-1 rounded-md transition text-slate-600">🇬🇧 EN</button>
+        </div>
       </div>
-      <a href="jak-pracujemy.html" class="block py-2 text-slate-700">Jak pracujemy (obieg online)</a>
-      <a href="opinie.html" class="block py-2 text-slate-700">Opinie i referencje</a>
-      <a href="kontakt.html" class="block py-2 text-slate-700">Kontakt i lokalizacja</a>
+
+      <a href="index.html" data-i18n="nav_home" class="block py-2 text-slate-700">Strona Główna</a>
+      <a href="o-biurze.html" data-i18n="nav_about" class="block py-2 text-brand-600 font-semibold">O biurze i doświadczenie</a>
+      <a href="certyfikaty.html" data-i18n="nav_certificates" class="block py-2 text-slate-700">Certyfikaty i polisa OC</a>
+      <div class="py-1 pl-3 border-l-2 border-brand-200 space-y-2 text-xs">
+        <p data-i18n="mobile_offer_title" class="font-bold text-slate-400 uppercase tracking-wider text-[10px]">Oferta:</p>
+        <a href="ksiegowosc-jdg.html" data-i18n="nav_jdg" class="block py-1 text-slate-700">Księgowość JDG i B2B</a>
+        <a href="pelna-ksiegowosc-spolki.html" data-i18n="nav_spolki" class="block py-1 text-slate-700">Pełna Księgowość (Spółki)</a>
+        <a href="kadry-i-place.html" data-i18n="nav_kadry" class="block py-1 text-slate-700">Kadry i Płace</a>
+        <a href="ksef.html" class="block py-1 text-brand-600 font-semibold flex items-center justify-between">
+          <span data-i18n="nav_ksef">Wdrożenie KSeF</span> <span data-i18n="nav_ksef_badge" class="text-[9px] bg-brand-600 text-white px-1.5 py-0.5 rounded">Nowość</span>
+        </a>
+        <a href="rejestracja-firmy.html" data-i18n="nav_rejestracja" class="block py-1 text-slate-700">Zakładanie firmy za 0 zł</a>
+      </div>
+      <a href="jak-pracujemy.html" data-i18n="nav_how_we_work" class="block py-2 text-slate-700">Jak pracujemy (obieg online)</a>
+      <a href="opinie.html" data-i18n="nav_reviews" class="block py-2 text-slate-700">Opinie i referencje</a>
+      <a href="kontakt.html" data-i18n="nav_contact" class="block py-2 text-slate-700">Kontakt i lokalizacja</a>
     </div>
   </nav>
 
@@ -118,9 +149,9 @@
   <section class="bg-gradient-to-r from-brand-950 via-slate-900 to-slate-950 text-white py-14">
     <div class="max-w-6xl mx-auto px-4">
       <div class="max-w-2xl">
-        <span class="text-amber-400 text-xs font-bold uppercase tracking-wider">Doświadczenie • Zaufanie • Relacje</span>
-        <h1 class="text-3xl sm:text-4xl font-extrabold mt-2 mb-4 leading-tight">O Biurze Rachunkowym Trzebiatowska</h1>
-        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+        <span data-i18n="about_hero_tag" class="text-amber-400 text-xs font-bold uppercase tracking-wider">Doświadczenie • Zaufanie • Relacje</span>
+        <h1 data-i18n="about_hero_title" class="text-3xl sm:text-4xl font-extrabold mt-2 mb-4 leading-tight">O Biurze Rachunkowym Trzebiatowska</h1>
+        <p data-i18n="about_hero_desc" class="text-slate-300 text-sm sm:text-base leading-relaxed">
           Księgowość prowadzona z pasją, oparta na solidnych podstawach akademickich, ponad 15-letniej praktyce gospodarczej i wzajemnym szacunku.
         </p>
       </div>
@@ -152,11 +183,48 @@
             „Prywatnie jestem lokalną patriotką, miłośniczką Kaszub, dobrego smaku, czerwonego wina i wyśmienitej kawy. Wolne chwile spędzam z rodziną oraz psem rasy coton de tuléar o imieniu Piątek. Bardzo lubię kontakt z ludźmi – obserwowanie rozwoju firm moich klientów i współtworzenie ich sukcesu daje mi ogromną satysfakcję.”
           </p>
         </div>
+
+        <!-- ZDJĘCIE SPOTKANIA PRZY KAWIE -->
+        <div class="mt-8 rounded-3xl overflow-hidden border border-slate-200/90 shadow-md">
+          <div class="img-zoom-container h-64 sm:h-80 w-full bg-slate-100">
+            <img src="assets/img/foto-kawa-konsultacja.jpg" alt="Konsultacje księgowe przy kawie w Gdańsku" class="w-full h-full object-cover">
+          </div>
+          <div class="p-4 bg-slate-50 border-t border-slate-200 text-xs text-slate-600 flex items-center justify-between">
+            <span class="font-medium">☕ Bezpośrednie spotkania i ludzkie podejście do finansów</span>
+            <span class="text-brand-600 font-bold">ul. Piastowska 89, Gdańsk</span>
+          </div>
+        </div>
       </div>
 
       <!-- BOCZNY PANEL WIZERUNKOWY -->
       <div class="lg:col-span-5 space-y-6">
-        <div class="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm">
+        <!-- WIZYTÓWKA ZE ZDJĘCIEM KATARZYNY -->
+        <div class="bg-white border border-slate-200/90 rounded-3xl overflow-hidden shadow-lg">
+          <div class="img-zoom-container h-72 w-full bg-slate-100 relative">
+            <img src="assets/img/foto-katarzyna-trzebiatowska.jpg" alt="Katarzyna Trzebiatowska" class="w-full h-full object-cover object-top">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-4 text-white">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-brand-300 block">Licencja MF nr 28310</span>
+              <p class="text-lg font-bold">Katarzyna Trzebiatowska</p>
+            </div>
+          </div>
+          <div class="p-5 text-xs text-slate-600 space-y-2 bg-slate-50 border-t border-slate-100">
+            <div class="flex items-center justify-between">
+              <span class="text-slate-500">Doświadczenie:</span>
+              <span class="font-bold text-slate-900">Ponad 15 lat w finansach</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-slate-500">Wykształcenie:</span>
+              <span class="font-bold text-slate-900">Uniwersytet Gdański</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-slate-500">Ubezpieczenie:</span>
+              <span class="font-bold text-emerald-700">Lloyd's Insurance</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-7 shadow-xs">
           <h3 class="text-base font-bold text-slate-900 mb-4 flex items-center gap-2">
             <span>🏛️</span> Fundamenty naszej pracy
           </h3>
@@ -191,18 +259,25 @@
             </li>
           </ul>
 
-          <div class="mt-8 pt-6 border-t border-slate-200">
-            <a href="certyfikaty.html" class="block w-full text-center bg-brand-600 hover:bg-brand-700 text-white font-semibold py-3 rounded-xl text-xs transition shadow-sm">
-              Zobacz certyfikaty i dyplomy →
+          <div class="mt-6 pt-5 border-t border-slate-200 flex items-center gap-3">
+            <a href="#" data-lightbox-src="assets/img/certyfikat-mf.png" data-lightbox-caption="Licencja MF nr 28310" class="h-14 w-12 bg-white rounded border border-slate-200 p-1 flex items-center justify-center overflow-hidden hover:scale-105 transition">
+              <img src="assets/img/certyfikat-mf.png" alt="MF" class="max-h-full max-w-full object-contain">
             </a>
+            <a href="#" data-lightbox-src="assets/img/certyfikat-ug.png" data-lightbox-caption="Dyplom Uniwersytetu Gdańskiego" class="h-14 w-12 bg-white rounded border border-slate-200 p-1 flex items-center justify-center overflow-hidden hover:scale-105 transition">
+              <img src="assets/img/certyfikat-ug.png" alt="UG" class="max-h-full max-w-full object-contain">
+            </a>
+            <div class="text-[11px] text-slate-500">
+              <a href="certyfikaty.html" class="font-bold text-brand-600 hover:underline block">Zobacz 6 certyfikatów →</a>
+              <span>Licencja MF & Dyplom UG</span>
+            </div>
           </div>
         </div>
 
         <!-- BOX ZAPROSZENIE NA KAWĘ -->
-        <div class="bg-blue-900 text-white rounded-3xl p-6 sm:p-8 text-center shadow-md">
+        <div class="bg-gradient-to-br from-brand-950 via-slate-900 to-slate-950 text-white rounded-3xl p-6 sm:p-7 text-center shadow-md">
           <span class="text-3xl block mb-3">☕</span>
           <h4 class="text-lg font-bold mb-2">Zapraszam na spotkanie przy kawie</h4>
-          <p class="text-brand-200 text-xs leading-relaxed mb-6">
+          <p class="text-slate-300 text-xs leading-relaxed mb-6">
             Porozmawiajmy o potrzebach Twojej firmy w naszym biurze w Gdańsku na Przymorzu lub podczas wideorozmowy.
           </p>
           <a href="tel:+48503596811" class="inline-block bg-white text-brand-900 font-bold text-xs px-5 py-3 rounded-xl shadow-xs hover:bg-slate-100 transition">
@@ -220,33 +295,33 @@
         <div class="bg-white p-2 rounded-xl inline-block mb-3">
           <img src="assets/img/logo-default.png" alt="Biuro Rachunkowe Trzebiatowska" class="h-9 w-auto">
         </div>
-        <p class="text-slate-400 leading-relaxed mb-4 text-[11px]">
+        <p data-i18n="footer_desc" class="text-slate-400 leading-relaxed mb-4 text-[11px]">
           Profesjonalne usługi księgowe i kadrowo-płacowe w Gdańsku na Przymorzu. Licencja Ministerstwa Finansów nr 28310. Ubezpieczenie w Lloyd's.
         </p>
       </div>
       <div>
-        <p class="text-white font-semibold mb-3">Nawigacja</p>
+        <p data-i18n="footer_nav_hdr" class="text-white font-semibold mb-3">Nawigacja</p>
         <ul class="space-y-2 text-[11px]">
-          <li><a href="index.html" class="hover:text-white transition">Strona Główna</a></li>
-          <li><a href="o-biurze.html" class="text-white font-semibold">O biurze</a></li>
-          <li><a href="certyfikaty.html" class="hover:text-white transition">Certyfikaty i polisa OC</a></li>
-          <li><a href="jak-pracujemy.html" class="hover:text-white transition">Jak pracujemy</a></li>
-          <li><a href="opinie.html" class="hover:text-white transition">Referencje</a></li>
-          <li><a href="kontakt.html" class="hover:text-white transition">Kontakt</a></li>
+          <li><a href="index.html" data-i18n="nav_home" class="hover:text-white transition">Strona Główna</a></li>
+          <li><a href="o-biurze.html" data-i18n="nav_about" class="text-white font-semibold">O biurze</a></li>
+          <li><a href="certyfikaty.html" data-i18n="nav_certificates" class="hover:text-white transition">Certyfikaty i polisa OC</a></li>
+          <li><a href="jak-pracujemy.html" data-i18n="nav_how_we_work" class="hover:text-white transition">Jak pracujemy</a></li>
+          <li><a href="opinie.html" data-i18n="nav_reviews" class="hover:text-white transition">Referencje</a></li>
+          <li><a href="kontakt.html" data-i18n="nav_contact" class="hover:text-white transition">Kontakt</a></li>
         </ul>
       </div>
       <div>
-        <p class="text-white font-semibold mb-3">Oferta</p>
+        <p data-i18n="footer_offer_hdr" class="text-white font-semibold mb-3">Oferta</p>
         <ul class="space-y-2 text-[11px]">
-          <li><a href="ksiegowosc-jdg.html" class="hover:text-white transition">Księgowość JDG i B2B</a></li>
-          <li><a href="pelna-ksiegowosc-spolki.html" class="hover:text-white transition">Pełna Księgowość (Spółki)</a></li>
-          <li><a href="kadry-i-place.html" class="hover:text-white transition">Kadry i Płace</a></li>
-          <li><a href="ksef.html" class="hover:text-white transition">Wdrożenie KSeF</a></li>
-          <li><a href="rejestracja-firmy.html" class="hover:text-white transition">Zakładanie firmy za 0 zł</a></li>
+          <li><a href="ksiegowosc-jdg.html" data-i18n="nav_jdg" class="hover:text-white transition">Księgowość JDG i B2B</a></li>
+          <li><a href="pelna-ksiegowosc-spolki.html" data-i18n="nav_spolki" class="hover:text-white transition">Pełna Księgowość (Spółki)</a></li>
+          <li><a href="kadry-i-place.html" data-i18n="nav_kadry" class="hover:text-white transition">Kadry i Płace</a></li>
+          <li><a href="ksef.html" data-i18n="nav_ksef" class="hover:text-white transition">Wdrożenie KSeF</a></li>
+          <li><a href="rejestracja-firmy.html" data-i18n="nav_rejestracja" class="hover:text-white transition">Zakładanie firmy za 0 zł</a></li>
         </ul>
       </div>
       <div>
-        <p class="text-white font-semibold mb-3">Kontakt</p>
+        <p data-i18n="footer_contact_hdr" class="text-white font-semibold mb-3">Kontakt</p>
         <ul class="space-y-2 text-[11px]">
           <li class="text-slate-300">📍 ul. Piastowska 89, II piętro<br>80-363 Gdańsk Przymorze</li>
           <li>📞 <a href="tel:+48503596811" class="text-white font-bold hover:underline">+48 503 59 68 11</a></li>
@@ -256,10 +331,11 @@
       </div>
     </div>
     <div class="max-w-6xl mx-auto px-4 pt-6 border-t border-slate-800 text-[11px] text-center text-slate-500">
-      <p>© 2026 Biuro Rachunkowe Trzebiatowska. Wszelkie prawa zastrzeżone.</p>
+      <p data-i18n="footer_rights">© 2026 Biuro Rachunkowe Trzebiatowska. Wszelkie prawa zastrzeżone.</p>
     </div>
   </footer>
 
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/i18n.js"></script>
 </body>
 </html>
