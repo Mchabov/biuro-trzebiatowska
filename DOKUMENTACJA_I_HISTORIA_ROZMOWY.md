@@ -289,3 +289,17 @@ Zgodnie z analizą odręcznych notatek p. Katarzyny (skany stron 6 i 8):
      * Wyjaśnienie: Rejestracja w CEIDG / KRS jest usługą odpłatną.
 4. **Rozwijana Pełna Tabela Cennika:**
    * Dodano przycisk `📊 Zobacz oficjalną matrycę stawek i pełny cennik biura`, który rozwija czytelną, responsywną tabelę z kompletnymi stawkami netto dla JDG i Spółek.
+
+---
+
+## 16. Oczyszczenie Nagłówka i Paska Nawigacji (Optymalizacja UI)
+Zgodnie z bezpośrednią uwagą użytkownika:
+1. **Czysty przełącznik języków w górnej belce (Top Bar):**
+   * Usunięto flagi emoji (które na systemie Windows powodowały powielanie liter i renderowały się jako `PL PL`, `EN GB`, `UA UA`).
+   * Pozostawiono minimalistyczne, czytelne przyciski tekstowe: **`PL` | `EN` | `UA`** z aktywnym podświetleniem.
+2. **Usunięcie duplikatu przełącznika z menu nawigacyjnego:**
+   * Wyeliminowano pigułkę językową z paska navbar, dzięki czemu nie zabiera ona cennego miejsca na desktopie.
+3. **Usunięcie danych właścicielki z bezpośredniego sąsiedztwa logo:**
+   * Zlikwidowano blok tekstowy przy logo (*Katarzyna Trzebiatowska / Gdańsk Przymorze...*), który powodował zawijanie pozycji menu głównego na 2 wiersze (*„Strona / Główna”*, *„O / biurze”*).
+   * Logo pozostało wyeksponowane, duże i wyraziste (`h-14 sm:h-16 md:h-18 lg:h-20`), a menu zyskało regułę `whitespace-nowrap` i pełną przestrzeń oddechu w jednej estetycznej linii.
+
