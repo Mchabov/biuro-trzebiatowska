@@ -1,6 +1,6 @@
 /**
  * Główny skrypt JavaScript - Biuro Rachunkowe Trzebiatowska
- * Obsługa menu mobilnego, kalkulatora wyceny, akordeonów FAQ oraz formularzy.
+ * Obsługa menu mobilnego, kalkulatora wyceny (stawki z autentycznego cennika biura), akordeonów FAQ oraz formularzy.
  */
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function () {
       mobileMenu.classList.toggle('hidden');
     });
 
-    // Zamknięcie menu po kliknięciu w link wewnętrzny
     mobileMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
@@ -24,48 +23,48 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // 2. INTERAKTYWNY KALKULATOR WYCENY (LEAD GENERATOR)
+  // 2. INTERAKTYWNY KALKULATOR WYCENY (DOKŁADNY CENNIK PANI KATARZYNY)
   const calcForm = document.getElementById('pricing-calculator-form');
   if (calcForm) {
     const entityButtons = calcForm.querySelectorAll('.calc-entity-btn');
     const docButtons = calcForm.querySelectorAll('.calc-doc-btn');
     const employeeButtons = calcForm.querySelectorAll('.calc-emp-btn');
     const estimatePrice = document.getElementById('estimate-price');
+    const estimateSubtitle = document.getElementById('estimate-subtitle');
 
     let selectedEntity = 'jdg'; // jdg, spolka, new
-    let selectedDocs = '10-30'; // 0-10, 10-30, 31-60, 60+
+    let selectedDocs = '6-30'; // 0-5, 6-30, 31-60, 60+
     let selectedEmployees = '0'; // 0, 1-3, 4+
+
+    // Matryca stawek netto uzgodniona z p. Katarzyną
+    const pricingMatrix = {
+      jdg: {
+        '0':   { '0-5': 350,  '6-30': 400,  '31-60': 500,  '60+': 700 },
+        '1-3': { '0-5': 440,  '6-30': 490,  '31-60': 640,  '60+': 840 },
+        '4+':  { '0-5': 710,  '6-30': 760,  '31-60': 910,  '60+': 1110 }
+      },
+      spolka: {
+        '0':   { '0-5': 950,  '6-30': 1050, '31-60': 1250, '60+': 1800 },
+        '1-3': { '0-5': 1050, '6-30': 1150, '31-60': 1350, '60+': 1900 },
+        '4+':  { '0-5': 1350, '6-30': 1450, '31-60': 1650, '60+': 2200 }
+      }
+    };
 
     function calculateEstimate() {
       if (!estimatePrice) return;
 
-      let basePrice = 250;
-
-      if (selectedEntity === 'jdg') {
-        if (selectedDocs === '0-10') basePrice = 250;
-        else if (selectedDocs === '10-30') basePrice = 350;
-        else if (selectedDocs === '31-60') basePrice = 500;
-        else basePrice = 650;
-      } else if (selectedEntity === 'spolka') {
-        if (selectedDocs === '0-10') basePrice = 650;
-        else if (selectedDocs === '10-30') basePrice = 850;
-        else if (selectedDocs === '31-60') basePrice = 1100;
-        else basePrice = 1400;
-      } else if (selectedEntity === 'new') {
-        basePrice = 0;
-      }
-
-      let employeeAddon = 0;
-      if (selectedEntity !== 'new') {
-        if (selectedEmployees === '1-3') employeeAddon = 120;
-        else if (selectedEmployees === '4+') employeeAddon = 250;
-      }
-
       if (selectedEntity === 'new') {
-        estimatePrice.innerHTML = '<span class="text-emerald-600 font-bold">0 zł</span> <span class="text-xs text-slate-500 font-normal">(przy umowie na obsługę)</span>';
+        estimatePrice.innerHTML = '<span class="text-[#a82682] font-black text-2xl">0 zł</span> <span class="text-xs text-slate-700 font-semibold">za 1. konsultację</span>';
+        if (estimateSubtitle) {
+          estimateSubtitle.textContent = 'Darmowe pierwsze spotkanie doradcze. Pomoc przy formalnej rejestracji firmy w CEIDG/KRS jest usługą odpłatną.';
+        }
       } else {
-        const total = basePrice + employeeAddon;
-        estimatePrice.innerHTML = `od ok. <span class="text-[#a82682] font-black text-2xl">${total} zł</span> <span class="text-xs text-slate-500 font-normal">netto / mc</span>`;
+        const rates = pricingMatrix[selectedEntity][selectedEmployees];
+        const price = rates[selectedDocs];
+        estimatePrice.innerHTML = `od ok. <span class="text-[#a82682] font-black text-2xl">${price} zł</span> <span class="text-xs text-slate-500 font-normal">netto / mc</span>`;
+        if (estimateSubtitle) {
+          estimateSubtitle.textContent = 'Szacunkowa stawka bazowa. Ostateczna kwota zależy m.in. od specyfiki transakcji (np. handel zagraniczny) i jest potwierdzana po bezpłatnej rozmowie.';
+        }
       }
     }
 

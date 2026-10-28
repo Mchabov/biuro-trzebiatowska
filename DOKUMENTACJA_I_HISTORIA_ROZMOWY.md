@@ -169,3 +169,64 @@ cd biuro-trzebiatowska
 ```
 * **Otwarcie strony:** Wystarczy dwuklik w plik `index.html` lub uruchomienie dowolnego serwera lokalnego (`python -m http.server 8000` lub `npx serve`).
 * Wszystkie zależności (Tailwind CDN, Google Fonts, ikony, lokalne grafiki) działają od razu bez konieczności instalowania `npm install`.
+
+
+---
+
+## 9. Wdrożenie Uwag i Poprawek Klientki (Email i Notatki ze Skanów PDF)
+
+W odpowiedzi na maila i 2 skany PDF od p. Katarzyny Trzebiatowskiej z odręcznymi poprawkami na wydrukach strony, wdrożono następujące zmiany:
+
+1. **Wyeksponowanie Logo Biura:**
+   * Powiększono rozmiar oficjalnego sygnetu/logo w pasku nawigacyjnym (`h-12 sm:h-14 md:h-16`) oraz dodano subtelny drop-shadow i mikrointerakcję powiększenia przy najechaniu (`scale-105`).
+   * Zapewniono idealne dopasowanie przestrzeni nagłówka na desktopie i mobile.
+
+2. **Eliminacja wiszących spójników („sierotek”):**
+   * Zastosowano niełamliwe spacje (`&nbsp;`) po spójnikach i przyimkach (`w`, `z`, `o`, `i`, `a`, `u`, `do`, `na`, `od`, `po`, `za`, `ze`, `we`) we wszystkich tekstach.
+   * Wdrożono nowoczesne reguły CSS: `text-wrap: pretty; text-wrap: balance;`.
+
+3. **Dedykowana Wersja Ukraińska (`ua.html`) i Przełącznik Językowy:**
+   * Stworzono kompletną, natywną podstronę w języku ukraińskim skierowaną do ukraińskich przedsiębiorców w Gdańsku (JDG/ФОП, Spółka z o.o./ТОВ, PESEL, ZUS, VAT, Ulga na Start, podpisy Certum).
+   * Dodano przełącznik języka `PL | UA 🇺🇦` w Topbarze, Navbarze desktopowym oraz menu mobilnym na wszystkich 12 podstronach.
+
+4. **Akademia LTCA i Wsparcie b. Naczelnika Urzędu Skarbowego:**
+   * Dodano informację o wieloletniej współpracy z Akademią LTCA (bieżące aktualizacje wiedzy i stałe wsparcie doradców podatkowych).
+   * Wyeksponowano merytoryczne wsparcie byłego naczelnika jednego z Trójmiejskich urzędów skarbowych (kluczowy argument zaufania i ochrony zarządu).
+
+5. **Nowy Obowiązek Fiskalny JPK_PD (od 2027 r.) i Oprogramowanie InsERT:**
+   * Zgodnie z wytycznymi p. Katarzyny, pytanie w FAQ o zmianę biura w trakcie roku zastąpiono wyczerpującym wyjaśnieniem gotowości biura na JPK_PD (JPK_CIT oraz JPK_PIT).
+   * Wskazano pracę na stale aktualizowanym oprogramowaniu firmy InsERT (Rewizor nexo, Rachmistrz nexo).
+
+6. **Firma Rodzinna i Kameralna Atmosfera:**
+   * Podkreślono rodzinny charakter biura i kameralną, zaufaną relację z klientem zamiast bezosobowych infolinii.
+
+7. **Podpisy Kwalifikowane Certum – Współpraca ze Spółką Certland:**
+   * Dodano ofertę sprzedaży podpisów kwalifikowanych Certum oraz potwierdzania tożsamości na miejscu w biurze (partnerstwo z Certland, certland.pl).
+
+8. **Korekta Doświadczenia:**
+   * Zaktualizowano staż z 15 do **ponad 18 lat doświadczenia**.
+
+9. **Całkowite Usunięcie „Orłów Rachunkowości”:**
+   * Zgodnie z notatką p. Katarzyny (*„nie mamy”*), usunięto wszystkie wzmianki i odznaki dotyczące Orłów Rachunkowości, zastępując je odznakami Akademii LTCA, b. Naczelnika US oraz Certland.
+
+10. **Rejestracja Firmy – Wyjaśnienie Zasad (brak „za 0 zł”):**
+    * Wyeliminowano hasła „za 0 zł” i „bezpłatna rejestracja”.
+    * Wprowadzono precyzyjną informację: pierwsze spotkanie doradcze (dobór formy opodatkowania, kodów PKD, analiza ZUS) jest bezpłatne, natomiast formalna usługa rejestracji w CEIDG lub KRS jest usługą odpłatną.
+    * Zmieniono sformułowanie na: *„Pomagamy dobrać prawidłowe kody PKD”*.
+
+11. **Autentyczny Cennik w Kalkulatorze Wyceny:**
+    * Wdrożono dokładne stawki netto i przedziały dokumentów p. Katarzyny:
+      - Przedziały dokumentów: `Do 5 szt.`, `6 – 30 szt.`, `31 – 60 szt.`, `Powyżej 60`.
+      - JDG (0 pracowników): 350 zł / 400 zł / 500 zł / 700 zł netto.
+      - JDG (1-3 pracowników): 440 zł / 490 zł / 640 zł / 840 zł netto.
+      - JDG (4+ pracowników): 710 zł / 760 zł / 910 zł / 1110 zł netto.
+      - Spółki (0 pracowników): 950 zł / 1050 zł / 1250 zł / 1800 zł netto.
+      - Spółki (1-3 pracowników): 1050 zł / 1150 zł / 1350 zł / 1900 zł netto.
+      - Spółki (4+ pracowników): 1350 zł / 1450 zł / 1650 zł / 2200 zł netto.
+
+12. **Pozostałe Poprawki Szczegółowe:**
+    * Referencja: Zmieniono nazwę na **Rafał Sosnowski – Prezes Zarządu Sosnowski Sp. k.**
+    * `ksef.html`: Wykreślono frazę o zmianie daty obowiązku podatkowego oraz słowo *definitywny*.
+    * `kadry-i-place.html`: Wprowadzono sformułowanie: *„Gwarantujemy pełną tajemnicę wysokości wynagrodzeń”*.
+    * `jak-pracujemy.html`: Termin dostarczenia dokumentów zaktualizowany na *„Do 5–7 dnia miesiąca”*, dodano krok *„Weryfikacja sprzedaży i kosztów”*.
+    * `ksiegowosc-jdg.html`: Zeznania roczne sporządzane *„na życzenie / zlecenie Klienta”*.
