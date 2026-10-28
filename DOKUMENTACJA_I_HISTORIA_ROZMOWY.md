@@ -230,3 +230,62 @@ W odpowiedzi na maila i 2 skany PDF od p. Katarzyny Trzebiatowskiej z odręcznym
     * `kadry-i-place.html`: Wprowadzono sformułowanie: *„Gwarantujemy pełną tajemnicę wysokości wynagrodzeń”*.
     * `jak-pracujemy.html`: Termin dostarczenia dokumentów zaktualizowany na *„Do 5–7 dnia miesiąca”*, dodano krok *„Weryfikacja sprzedaży i kosztów”*.
     * `ksiegowosc-jdg.html`: Zeznania roczne sporządzane *„na życzenie / zlecenie Klienta”*.
+
+---
+
+## 13. Wdrożenie 3 Pełnych Wersji Językowych (PL, EN, UA) i Identyczności Wizualnej
+Zgodnie z najnowszymi wytycznymi wdrożono 3 kompletne, w 100% spójne wizualnie wersje serwisu:
+1. **Polska (`index.html` + 9 podstron branżowych):**
+   * Strona główna z pełną siatką usług, sekcją zaufania, kalkulatorem i referencjami.
+2. **Angielska (`en.html`):**
+   * Dedykowana przedsiębiorcom zagranicznym i ekspatom prowadzącym działalność lub spółki z o.o. w Polsce.
+   * Pełna symetria sekcji: Hero z kartą Katarzyny Trzebiatowskiej, 3 filary bezpieczeństwa, 6 kafelków usług (w tym podpisy kwalifikowane Certum dla obcokrajowców do KRS), kalkulator w języku angielskim z autentyczną matrycą stawek, przetłumaczone referencje IMP PAN i Sosnowski Sp. k., FAQ oraz stopka.
+3. **Ukraińska (`ua.html`):**
+   * Dedykowana ukraińskim przedsiębiorcom w Trójmieście (JDG / B2B, Spółki z o.o., legalizacja, ZUS, KSeF).
+   * Przebudowana w 100% do identycznego układu graficznego jak strona polska i angielska.
+4. **Uniwersalny 3-kierunkowy przełącznik (`PL 🇵🇱 | EN 🇬🇧 | UA 🇺🇦`):**
+   * Wdrożony w górnym pasku (`header` topbar), głównym menu (`navbar` desktop) oraz menu mobilnym (`mobile drawer`) na **wszystkich 12 stronach projektu**.
+
+---
+
+## 14. Wyeksponowane, Prestiżowe Logo Firmy w Nagłówku
+W odpowiedzi na uwagę o wyeksponowaniu logotypu:
+1. **Nowy, ultra-ostry plik źródłowy (`assets/img/logo-default.png` oraz `logo.png`):**
+   * Wygenerowano bezstratny, wykadrowany sygnet w wysokiej rozdzielczości Retina (1251 × 504 px) na bazie oryginalnego pliku wektorowo-rastrowego 200px.
+   * Usunięto rozmycia i szumy kompresyjne.
+2. **Prestiżowy Brand Lockup w Pasku Nawigacyjnym:**
+   * Zwiększono wysokość sygnetu w nagłówku do `h-14 sm:h-16 md:h-18 lg:h-20` (60–80 px wysokości optycznej).
+   * Dodano elegancki podpis autorytetu po prawej stronie sygnetu (widoczny na ekranach desktop):  
+     `Katarzyna Trzebiatowska`  
+     `Gdańsk Przymorze • Licencja MF 28310 • Od 2008 r.`
+   * Wdrożono subtelny cień fuksjowo-purpurowy (`drop-shadow(0 2px 5px rgba(168, 38, 130, 0.15))`) oraz mikrointerakcję łagodnego powiększenia przy najechaniu kursorom myszy (`hover:scale-105`).
+
+---
+
+## 15. Dokładna Specyfikacja i Matryca Stawek Kalkulatora (Notatki Odręczne p. Katarzyny)
+Zgodnie z analizą odręcznych notatek p. Katarzyny (skany stron 6 i 8):
+1. **Prawidłowe Etykiety i Jednostka:**
+   * Zamiast słowa „sztuki” wprowadzono oficjalny termin księgowy: **`poz.` (pozycje księgowe)**.
+   * Przyciski wyboru przedziałów:
+     * `Do 5 poz.`
+     * `6 – 30 poz.`
+     * `31 – 60 poz.`
+     * `Powyżej 60 poz.`
+2. **Kategorie Pracowników:**
+   * `0 (tylko właściciel)`
+   * `1 – 3 pracowników`
+   * `Powyżej 4 pracowników`
+3. **Dokładna Matryca Cen Netto (JDG i Spółki):**
+   * **JDG (Ryczałt / KPiR):**
+     * Właściciel: `350 zł` (do 5 poz.), `400 zł` (6-30), `500 zł` (31-60), `700 zł` (>60).
+     * 1–3 pracowników (+90 zł): `440 zł`, `490 zł`, `590 zł`, `790 zł`.
+     * Pow. 4 pracowników (+360 zł): `710 zł`, `760 zł`, `860 zł`, `1 060 zł`.
+   * **Spółki z o.o. (Pełna Księgowość - Księgi Handlowe):**
+     * Zarząd / bez pracowników: `950 zł` (do 5 poz.), `1 050 zł` (6-30), `1 250 zł` (31-60), `1 800 zł` (>60).
+     * 1–3 pracowników (+100 zł): `1 050 zł`, `1 150 zł`, `1 350 zł`, `1 900 zł`.
+     * Pow. 4 pracowników (+400 zł): `1 350 zł`, `1 450 zł`, `1 650 zł`, `2 200 zł`.
+   * **„Dopiero planuję założyć firmę”:**
+     * `0 zł` za 1. konsultację doradczą (dobór formy opodatkowania, analiza ZUS, kody PKD).
+     * Wyjaśnienie: Rejestracja w CEIDG / KRS jest usługą odpłatną.
+4. **Rozwijana Pełna Tabela Cennika:**
+   * Dodano przycisk `📊 Zobacz oficjalną matrycę stawek i pełny cennik biura`, który rozwija czytelną, responsywną tabelę z kompletnymi stawkami netto dla JDG i Spółek.

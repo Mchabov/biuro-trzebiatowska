@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accounting Office Gdańsk Przymorze – Katarzyna Trzebiatowska | Certified Public Accountant Poland</title>
+  <meta name="description" content="Certified accounting office in Gdańsk Przymorze, Poland. Full statutory accounting for Sp. z o.o., JDG / B2B, payroll & HR, KSeF compliance. Over 18 years of experience, Ministry of Finance License No. 28310.">
+  <meta name="keywords" content="accountant Gdańsk, accounting office Poland, accounting for foreigners Poland, Sp z o o accounting, JDG accountant Gdansk, payroll Poland, KSeF Gdansk, Trzebiatowska">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fdf2f8',
+              100: '#fce7f3',
+              200: '#fbcfe8',
+              300: '#f472b6',
+              500: '#c026d3',
+              600: '#a82682',
+              700: '#8e1b6c',
+              800: '#701a53',
+              900: '#4a0e35',
+              950: '#2b061d',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <!-- SCHEMA.ORG STRUCTURED DATA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AccountingService",
+    "name": "Biuro Rachunkowe Trzebiatowska Katarzyna Trzebiatowska",
+    "image": "https://biurotrzebiatowska.pl/assets/img/logo-default.png",
+    "telephone": "+48 503 59 68 11",
+    "email": "kontakt@biurotrzebiatowska.pl",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "ul. Piastowska 89, II piętro",
+      "addressLocality": "Gdańsk",
+      "postalCode": "80-363",
+      "addressCountry": "PL"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "16:00"
+    },
+    "priceRange": "$$"
+  }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased pb-16 md:pb-0">
+
+  <!-- TOP BAR -->
+  <header class="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center space-x-4 sm:space-x-6 text-[11px] sm:text-xs">
+        <span class="flex items-center gap-1.5">📍 89 Piastowska St., Gdańsk Przymorze, Poland</span>
+        <span class="hidden md:inline text-slate-500">|</span>
+        <span class="hidden md:inline">⏰ Mon – Fri: 8:00 AM – 4:00 PM</span>
+      </div>
+      <div class="flex items-center space-x-3 sm:space-x-4 text-[11px] sm:text-xs font-medium">
+        <!-- 3-Language Switcher -->
+        <div class="lang-switcher-topbar">
+          <span class="text-slate-400 text-[10px] px-1">Language:</span>
+          <a href="index.html" class="lang-btn-top">PL 🇵🇱</a>
+          <a href="en.html" class="lang-btn-top active">EN 🇬🇧</a>
+          <a href="ua.html" class="lang-btn-top">UA 🇺🇦</a>
+        </div>
+        <span class="text-slate-700">|</span>
+        <a href="tel:+48503596811" class="text-amber-400 hover:text-amber-300 transition flex items-center gap-1">📞 +48 503 59 68 11</a>
+        <span class="text-slate-700">|</span>
+        <a href="mailto:kontakt@biurotrzebiatowska.pl" class="hover:text-white transition">✉ kontakt@biurotrzebiatowska.pl</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVBAR -->
+  <nav class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="en.html" class="flex items-center gap-3.5 group py-1">
+        <img src="assets/img/logo-default.png" alt="Biuro Rachunkowe Trzebiatowska Gdańsk" class="h-14 sm:h-16 md:h-18 lg:h-20 w-auto object-contain site-logo-img drop-shadow-md transition-transform duration-200 group-hover:scale-105">
+        <div class="hidden xl:flex flex-col border-l border-slate-200 pl-3.5 py-0.5 justify-center">
+          <span class="text-[12px] font-bold tracking-wider text-slate-800 uppercase">Katarzyna Trzebiatowska</span>
+          <span class="text-[10px] text-slate-500 font-medium">Gdańsk Przymorze • MF License 28310 • Est. 2008</span>
+        </div>
+      </a>
+
+      <!-- DESKTOP MENU -->
+      <div class="hidden lg:flex items-center space-x-7 text-sm font-medium text-slate-700">
+        <a href="en.html" class="nav-link active">Home</a>
+        <a href="o-biurze.html" class="nav-link hover:text-brand-600 transition">About Us</a>
+        <a href="certyfikaty.html" class="nav-link hover:text-brand-600 transition">Certifications</a>
+        
+        <!-- DROPDOWN SERVICES -->
+        <div class="relative group py-2">
+          <button class="nav-link hover:text-brand-600 transition flex items-center gap-1">
+            Services <span class="text-[10px]">▼</span>
+          </button>
+          <div class="absolute left-0 top-full hidden group-hover:block bg-white border border-slate-200 shadow-xl rounded-xl py-2 w-64 z-50">
+            <a href="ksiegowosc-jdg.html" class="block px-4 py-2 text-xs text-slate-700 hover:bg-brand-50 hover:text-brand-600 font-medium">Sole Proprietorship (JDG / B2B)</a>
+            <a href="pelna-ksiegowosc-spolki.html" class="block px-4 py-2 text-xs text-slate-700 hover:bg-brand-50 hover:text-brand-600 font-medium">Full Accounting (Sp. z o.o.)</a>
+            <a href="kadry-i-place.html" class="block px-4 py-2 text-xs text-slate-700 hover:bg-brand-50 hover:text-brand-600 font-medium">Payroll &amp; HR Services</a>
+            <div class="border-t border-slate-100 my-1"></div>
+            <a href="ksef.html" class="block px-4 py-2 text-xs text-brand-800 bg-brand-50/50 hover:bg-brand-100 font-semibold flex items-center justify-between">
+              KSeF Implementation <span class="text-[9px] bg-brand-600 text-white px-1.5 py-0.5 rounded">New</span>
+            </a>
+            <a href="rejestracja-firmy.html" class="block px-4 py-2 text-xs text-slate-700 hover:bg-brand-50 hover:text-brand-600 font-medium">Company Registration in Poland</a>
+          </div>
+        </div>
+
+        <a href="jak-pracujemy.html" class="nav-link hover:text-brand-600 transition">How We Work</a>
+        <a href="opinie.html" class="nav-link hover:text-brand-600 transition">Testimonials</a>
+        <a href="kontakt.html" class="nav-link hover:text-brand-600 transition">Contact</a>
+      </div>
+
+      <!-- RIGHT SIDE: LANGUAGE & ACTION -->
+      <div class="hidden sm:flex items-center gap-3">
+        <div class="lang-switcher-pill">
+          <a href="index.html" class="lang-btn">PL 🇵🇱</a>
+          <a href="en.html" class="lang-btn active">EN 🇬🇧</a>
+          <a href="ua.html" class="lang-btn">UA 🇺🇦</a>
+        </div>
+        <a href="#wycena" class="bg-brand-600 hover:bg-brand-700 text-white text-xs font-semibold px-4 py-2.5 rounded-xl shadow-xs transition">
+          Quick Quote
+        </a>
+      </div>
+
+      <!-- MOBILE HAMBURGER -->
+      <button id="mobile-menu-btn" class="lg:hidden p-2 text-slate-700 hover:text-brand-600" aria-label="Menu" aria-expanded="false">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-2 text-sm">
+      <div class="flex items-center justify-between p-2.5 bg-slate-100 rounded-lg text-xs font-semibold mb-2">
+        <span class="text-slate-600">Language:</span>
+        <div class="lang-switcher-pill">
+          <a href="index.html" class="lang-btn">PL 🇵🇱</a>
+          <a href="en.html" class="lang-btn active">EN 🇬🇧</a>
+          <a href="ua.html" class="lang-btn">UA 🇺🇦</a>
+        </div>
+      </div>
+      <a href="en.html" class="block py-2 text-brand-600 font-semibold">Home</a>
+      <a href="o-biurze.html" class="block py-2 text-slate-700">About Us &amp; Practice</a>
+      <a href="certyfikaty.html" class="block py-2 text-slate-700">Certifications &amp; Insurance</a>
+      <div class="py-1 pl-3 border-l-2 border-brand-200 space-y-2 text-xs">
+        <p class="font-bold text-slate-400 uppercase tracking-wider text-[10px]">Services:</p>
+        <a href="ksiegowosc-jdg.html" class="block py-1 text-slate-700">Sole Proprietorship (JDG / B2B)</a>
+        <a href="pelna-ksiegowosc-spolki.html" class="block py-1 text-slate-700">Full Accounting (Sp. z o.o.)</a>
+        <a href="kadry-i-place.html" class="block py-1 text-slate-700">Payroll &amp; HR Services</a>
+        <a href="ksef.html" class="block py-1 text-brand-600 font-semibold">KSeF Implementation</a>
+        <a href="rejestracja-firmy.html" class="block py-1 text-slate-700">Company Registration in Poland</a>
+      </div>
+      <a href="jak-pracujemy.html" class="block py-2 text-slate-700">How We Work (100% Online)</a>
+      <a href="opinie.html" class="block py-2 text-slate-700">Testimonials &amp; Reviews</a>
+      <a href="kontakt.html" class="block py-2 text-slate-700">Contact &amp; Location</a>
+      <div class="pt-3">
+        <a href="#wycena" class="block w-full bg-brand-600 text-white text-center py-2.5 rounded-xl font-semibold text-xs">
+          Calculate fee in 1 minute
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 1. HERO SECTION -->
+  <section class="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-brand-50/50 via-white to-slate-50 border-b border-slate-100">
+    <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-7">
+        <div class="inline-flex items-center gap-2 bg-brand-100/80 text-brand-900 text-xs font-semibold px-3.5 py-1.5 rounded-full mb-5 shadow-xs border border-brand-200/50">
+          <span>☕ Personal Approach • Human-Centered Certified Accounting</span>
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight mb-5">
+          Peace of mind regarding Polish taxes and your business finances in Gdańsk
+        </h1>
+        <p class="text-base sm:text-lg text-slate-600 mb-8 leading-relaxed max-w-xl">
+          We provide full statutory accounting for Polish LLCs (Sp. z o.o.), Sole Proprietorships (JDG / B2B), as well as comprehensive payroll and HR administration. We combine over 18 years of certified expertise with an approachable family atmosphere and a 100% digital document workflow.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-3.5 mb-10">
+          <a href="#wycena" class="bg-brand-600 hover:bg-brand-700 text-white text-center font-semibold px-6 py-3.5 rounded-xl shadow-md transition text-sm">
+            Calculate your accounting fee in 1 min
+          </a>
+          <a href="tel:+48503596811" class="border border-slate-300 hover:bg-white text-slate-800 text-center font-semibold px-6 py-3.5 rounded-xl transition text-sm flex items-center justify-center gap-2">
+            <span>📞 Call us: +48 503 59 68 11</span>
+          </a>
+        </div>
+
+        <!-- TRUST BADGES -->
+        <div class="pt-6 border-t border-slate-200 grid grid-cols-3 gap-3 text-left">
+          <div class="bg-white p-3.5 rounded-xl border border-slate-200/80 shadow-xs">
+            <p class="font-bold text-slate-900 text-xs sm:text-sm">MF License</p>
+            <p class="text-[11px] text-slate-500">Ministry License No. 28310</p>
+          </div>
+          <div class="bg-white p-3.5 rounded-xl border border-slate-200/80 shadow-xs">
+            <p class="font-bold text-slate-900 text-xs sm:text-sm">PI Insurance</p>
+            <p class="text-[11px] text-slate-500">Lloyd's Insurance</p>
+          </div>
+          <div class="bg-white p-3.5 rounded-xl border border-slate-200/80 shadow-xs">
+            <p class="font-bold text-slate-900 text-xs sm:text-sm">LTCA Academy</p>
+            <p class="text-[11px] text-slate-500">Tax Advisor Advisory</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- IDENTITY CARD: KATARZYNA TRZEBIATOWSKA -->
+      <div class="lg:col-span-5">
+        <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/90 shadow-xl relative overflow-hidden">
+          <div class="flex items-center gap-4 mb-4">
+            <img src="assets/img/favicon.png" alt="Biuro Trzebiatowska" class="w-16 h-16 rounded-2xl shadow-xs border border-brand-100 p-1 bg-brand-50">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-brand-600 block">Chief Accountant &amp; Owner</span>
+              <h2 class="text-xl sm:text-2xl font-bold text-slate-900">Katarzyna Trzebiatowska</h2>
+            </div>
+          </div>
+          <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">
+            “I know that entrepreneurs, especially those expanding into Poland from abroad, need clarity without bureaucratic jargon, peace of mind, and absolute certainty that their accounts are fully compliant with the Polish tax authority. You are warmly invited for a consultation – over a cup of good coffee or tea.”
+          </p>
+
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-3.5 space-y-2 text-xs text-slate-700">
+            <div class="flex items-center gap-2">
+              <span class="text-brand-600 font-bold">✓</span>
+              <span>Over 18 years of professional accounting practice in Poland</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-brand-600 font-bold">✓</span>
+              <span>University of Gdańsk Alumna (UG)</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-brand-600 font-bold">✓</span>
+              <span>Member of Accountants Association in Poland (SKwP)</span>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-100 flex justify-between items-center text-xs">
+            <a href="o-biurze.html" class="text-brand-600 font-semibold hover:underline">Learn about our practice →</a>
+            <a href="certyfikaty.html" class="text-slate-500 hover:text-slate-800">View license &amp; certificates (PDF)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. THREE PILLARS -->
+  <section class="py-14 sm:py-16 bg-white border-b border-slate-100">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Why do entrepreneurs choose our accounting office?</h2>
+        <p class="text-slate-600 mt-2 text-sm">Transparent rules, complete financial security, and dedicated partnership at every step.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50 card-hover">
+          <div class="w-12 h-12 rounded-xl bg-brand-100 text-brand-700 flex items-center justify-center text-xl mb-4 font-bold">🛡️</div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">100% Financial Security</h3>
+          <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+            We assume full civil liability for your accounting books. Backed by professional indemnity insurance with Lloyd’s and certified Ministry of Finance License No. 28310.
+          </p>
+          <a href="certyfikaty.html" class="text-xs font-semibold text-brand-600 hover:underline">Learn more about our safeguards →</a>
+        </div>
+
+        <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50 card-hover">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-xl mb-4 font-bold">⏱️</div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Punctuality &amp; Deadlines</h3>
+          <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+            You always know well in advance what taxes and ZUS contributions are due. We monitor every statutory deadline so you can focus entirely on your business.
+          </p>
+          <a href="jak-pracujemy.html" class="text-xs font-semibold text-emerald-700 hover:underline">Check workflow procedures →</a>
+        </div>
+
+        <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50 card-hover">
+          <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl mb-4 font-bold">☕</div>
+          <h3 class="text-lg font-bold text-slate-900 mb-2">Family Business &amp; Care</h3>
+          <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
+            We are an established family firm with a warm, personal atmosphere. You are never an anonymous ticket number – you have direct access to your dedicated accountant.
+          </p>
+          <a href="o-biurze.html" class="text-xs font-semibold text-amber-700 hover:underline">About our approach →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. SERVICES (OFFER) -->
+  <section class="py-14 sm:py-20 bg-slate-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-brand-600">Tailored Solutions</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">Comprehensive accounting and payroll services</h2>
+        </div>
+        <p class="text-slate-600 text-xs sm:text-sm max-w-md">
+          Explore our key service areas below to learn about the full scope of business support in Poland.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 mb-8">
+        <!-- CARD 1: JDG -->
+        <div class="bg-white p-7 rounded-2xl border border-slate-200/90 shadow-sm flex flex-col justify-between card-hover">
+          <div>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-brand-600 bg-brand-50 px-2.5 py-1 rounded">For Self-Employed</span>
+            <h3 class="text-xl font-bold text-slate-900 mt-4 mb-2">Sole Proprietorship (JDG / B2B)</h3>
+            <p class="text-slate-600 text-xs sm:text-sm mb-4 leading-relaxed">
+              Accounting for sole proprietors, IT contractors, consultants on lump-sum (ryczałt), and professional service businesses.
+            </p>
+            <ul class="text-xs text-slate-600 space-y-2 mb-6">
+              <li class="flex items-center gap-2">✓ Lump-sum tax (Ryczałt 8.5%, 12%) and KPiR</li>
+              <li class="flex items-center gap-2">✓ VAT &amp; VAT-UE settlements, cross-border invoicing</li>
+              <li class="flex items-center gap-2">✓ Tax optimization &amp; social insurance (ZUS) relief</li>
+            </ul>
+          </div>
+          <a href="ksiegowosc-jdg.html" class="text-xs font-bold text-brand-600 hover:text-brand-800 flex items-center justify-between pt-4 border-t border-slate-100">
+            <span>Details for JDG &amp; B2B</span>
+            <span>→</span>
+          </a>
+        </div>
+
+        <!-- CARD 2: SPÓŁKI -->
+        <div class="bg-white p-7 rounded-2xl border border-slate-200/90 shadow-sm flex flex-col justify-between card-hover">
+          <div>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-purple-700 bg-purple-50 px-2.5 py-1 rounded">For Companies</span>
+            <h3 class="text-xl font-bold text-slate-900 mt-4 mb-2">Full Statutory Accounting</h3>
+            <p class="text-slate-600 text-xs sm:text-sm mb-4 leading-relaxed">
+              Statutory general ledger management (Księgi Handlowe) for Limited Liability Companies (Sp. z o.o.) and partnerships.
+            </p>
+            <ul class="text-xs text-slate-600 space-y-2 mb-6">
+              <li class="flex items-center gap-2">✓ Complete bookkeeping in accordance with Polish GAAP</li>
+              <li class="flex items-center gap-2">✓ Annual statutory financial statements (e-KRS)</li>
+              <li class="flex items-center gap-2">✓ Management reporting &amp; CIT tax compliance</li>
+            </ul>
+          </div>
+          <a href="pelna-ksiegowosc-spolki.html" class="text-xs font-bold text-purple-700 hover:text-purple-900 flex items-center justify-between pt-4 border-t border-slate-100">
+            <span>Details of full accounting</span>
+            <span>→</span>
+          </a>
+        </div>
+
+        <!-- CARD 3: KADRY -->
+        <div class="bg-white p-7 rounded-2xl border border-slate-200/90 shadow-sm flex flex-col justify-between card-hover">
+          <div>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded">For Employers</span>
+            <h3 class="text-xl font-bold text-slate-900 mt-4 mb-2">Payroll &amp; HR Services</h3>
+            <p class="text-slate-600 text-xs sm:text-sm mb-4 leading-relaxed">
+              We handle all statutory HR documentation, employment contracts, payroll lists, and mandatory ZUS reporting.
+            </p>
+            <ul class="text-xs text-slate-600 space-y-2 mb-6">
+              <li class="flex items-center gap-2">✓ Payroll slips, monthly payroll lists, ZUS DRA</li>
+              <li class="flex items-center gap-2">✓ Employment contracts, civil law contracts</li>
+              <li class="flex items-center gap-2">✓ Complete personnel files &amp; annual PIT-11 returns</li>
+            </ul>
+          </div>
+          <a href="kadry-i-place.html" class="text-xs font-bold text-emerald-700 hover:text-emerald-900 flex items-center justify-between pt-4 border-t border-slate-100">
+            <span>Details of HR &amp; payroll</span>
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- ADDITIONAL BLOCK: CERTUM QUALIFIED SIGNATURES -->
+      <div class="mt-6 bg-white border border-slate-200/90 p-6 sm:p-7 rounded-2xl shadow-xs flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-purple-100 text-brand-700 flex items-center justify-center text-2xl font-bold shrink-0">✍️</div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-bold uppercase tracking-wider text-brand-600">Certland Authorized Partner (certland.pl)</span>
+              <span class="bg-brand-50 text-brand-700 text-[10px] font-bold px-2 py-0.5 rounded">Stationary Point Gdańsk</span>
+            </div>
+            <h3 class="text-base sm:text-lg font-bold text-slate-900">Certum Qualified Electronic Signatures &amp; Identity Verification</h3>
+            <p class="text-xs text-slate-600 mt-0.5">Obtain a qualified electronic signature essential for Polish KRS, JPK_PD, e-Tax returns, and KSeF directly at our Gdańsk office.</p>
+          </div>
+        </div>
+        <a href="kontakt.html" class="shrink-0 bg-slate-900 hover:bg-brand-600 text-white text-xs font-semibold px-4 py-2.5 rounded-xl transition">
+          Get Certum Signature →
+        </a>
+      </div>
+
+      <!-- KSEF + COMPANY FORMATION BLOCKS -->
+      <div class="grid md:grid-cols-2 gap-6 mt-6">
+        <div class="bg-gradient-to-r from-brand-950 via-slate-900 to-slate-950 text-white p-7 sm:p-8 rounded-2xl shadow-md flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 mb-3">
+              <span class="bg-brand-600 text-brand-100 text-[10px] uppercase font-bold px-2 py-0.5 rounded">Legal Requirement</span>
+              <span class="text-slate-300 text-xs">National e-Invoicing System</span>
+            </div>
+            <h3 class="text-xl font-bold mb-2">We will prepare your company for KSeF</h3>
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-6">
+              Tax office authorization (ZAW-FA form), accounting software integration, structured e-invoicing procedures. Seamless transition without penalties.
+            </p>
+          </div>
+          <a href="ksef.html" class="inline-flex items-center justify-between bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold px-4 py-3 rounded-xl transition">
+            <span>Learn how we implement KSeF</span>
+            <span>→</span>
+          </a>
+        </div>
+
+        <div class="bg-amber-50/80 border border-amber-200/90 p-7 sm:p-8 rounded-2xl shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 mb-3">
+              <span class="bg-amber-200 text-amber-900 text-[10px] uppercase font-bold px-2 py-0.5 rounded">Starting in Poland</span>
+              <span class="text-amber-800 text-xs">Free Initial Consultation</span>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-2">Company Registration in Poland (Gdańsk)</h3>
+            <p class="text-slate-700 text-xs sm:text-sm leading-relaxed mb-6">
+              Free first advisory session (selecting optimal tax regime, PKD activity codes, ZUS incentives). We guide you through CEIDG registration or S24 / KRS for Sp. z o.o.
+            </p>
+          </div>
+          <a href="rejestracja-firmy.html" class="inline-flex items-center justify-between bg-amber-600 hover:bg-amber-700 text-white text-xs font-semibold px-4 py-3 rounded-xl transition">
+            <span>Company setup details</span>
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. INTERACTIVE CALCULATOR -->
+  <section id="wycena" class="py-16 sm:py-20 bg-gradient-to-br from-brand-950 via-slate-900 to-slate-950 text-white relative">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <span class="text-brand-300 text-xs uppercase font-bold tracking-wider">Online Cost Calculator</span>
+        <h2 class="text-2xl sm:text-3xl font-bold mt-1">Estimate the accounting cost for your company</h2>
+        <p class="text-slate-300 text-xs sm:text-sm mt-2 max-w-xl mx-auto">
+          Select your business parameters to see an instant estimate from our official price matrix, and submit the form to receive a detailed, non-binding proposal within 24h.
+        </p>
+      </div>
+
+      <div class="bg-white text-slate-900 p-6 sm:p-9 rounded-3xl shadow-2xl">
+        <form id="pricing-calculator-form" class="space-y-6">
+          
+          <!-- STEP 1 -->
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2.5">
+              1. Legal form of your business in Poland:
+            </label>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+              <button type="button" data-value="jdg" class="calc-entity-btn py-3 px-3 border-2 border-brand-600 bg-brand-50 text-brand-900 font-bold rounded-xl text-xs text-center transition">
+                Sole Proprietorship (JDG / B2B)
+              </button>
+              <button type="button" data-value="spolka" class="calc-entity-btn py-3 px-3 border border-slate-200 hover:border-slate-300 text-slate-700 rounded-xl text-xs text-center transition">
+                LLC / Partnership (Spółka z o.o.)
+              </button>
+              <button type="button" data-value="new" class="calc-entity-btn py-3 px-3 border border-slate-200 hover:border-slate-300 text-slate-700 rounded-xl text-xs text-center transition">
+                Planning to establish a business
+              </button>
+            </div>
+          </div>
+
+          <!-- STEP 2 -->
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2.5">
+              2. Number of accounting documents (entries) per month:
+            </label>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+              <button type="button" data-value="0-5" class="calc-doc-btn py-2.5 border border-slate-200 text-slate-700 rounded-lg text-xs text-center font-medium">Up to 5 entries</button>
+              <button type="button" data-value="6-30" class="calc-doc-btn py-2.5 border-2 border-brand-600 bg-brand-50 text-brand-900 font-bold rounded-lg text-xs text-center">6 – 30 entries</button>
+              <button type="button" data-value="31-60" class="calc-doc-btn py-2.5 border border-slate-200 text-slate-700 rounded-lg text-xs text-center font-medium">31 – 60 entries</button>
+              <button type="button" data-value="60+" class="calc-doc-btn py-2.5 border border-slate-200 text-slate-700 rounded-lg text-xs text-center font-medium">Over 60 entries</button>
+            </div>
+          </div>
+
+          <!-- STEP 3 -->
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2.5">
+              3. Number of hired employees / contractors:
+            </label>
+            <div class="grid grid-cols-3 gap-2.5">
+              <button type="button" data-value="0" class="calc-emp-btn py-2.5 border-2 border-brand-600 bg-brand-50 text-brand-900 font-bold rounded-lg text-xs text-center">0 (owner only)</button>
+              <button type="button" data-value="1-3" class="calc-emp-btn py-2.5 border border-slate-200 text-slate-700 rounded-lg text-xs text-center font-medium">1 – 3 employees</button>
+              <button type="button" data-value="4+" class="calc-emp-btn py-2.5 border border-slate-200 text-slate-700 rounded-lg text-xs text-center font-medium">4+ employees</button>
+            </div>
+          </div>
+
+          <!-- ESTIMATE RESULT -->
+          <div id="calc-estimate-result" class="bg-brand-50/70 border border-brand-200 rounded-xl p-4 flex flex-col sm:flex-row justify-between items-center gap-3">
+            <div>
+              <p class="text-xs text-slate-600">Estimated monthly fee:</p>
+              <p id="estimate-price" class="text-lg font-bold text-slate-900">from approx. <span class="text-brand-600 text-2xl font-black">PLN 400</span> net / mo</p>
+            </div>
+            <p id="estimate-subtitle" class="text-[11px] text-slate-500 max-w-xs text-center sm:text-right">
+              Standard base rate from official price matrix. Final fee depends on transaction specifics (e.g. international VAT) and is confirmed during free consultation.
+            </p>
+          </div>
+
+          <!-- CONTACT INPUTS -->
+          <div class="grid sm:grid-cols-2 gap-4 pt-2">
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">Your phone number (required)</label>
+              <input type="tel" required placeholder="e.g. +48 503 123 456" class="w-full text-xs p-3.5 border border-slate-300 rounded-xl focus:ring-2 focus:ring-brand-600 focus:outline-none">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">Your email address (required)</label>
+              <input type="email" required placeholder="you@company.com" class="w-full text-xs p-3.5 border border-slate-300 rounded-xl focus:ring-2 focus:ring-brand-600 focus:outline-none">
+            </div>
+          </div>
+
+          <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-4 rounded-xl shadow-md transition text-sm flex items-center justify-center gap-2">
+            <span>Receive free tailored proposal within 24h</span>
+            <span>→</span>
+          </button>
+          
+          <p class="text-[11px] text-slate-400 text-center">
+            🔒 We respect your privacy. No spam – we only reach out to provide your customized quotation.
+          </p>
+
+          <!-- FULL PRICE MATRIX COLLAPSIBLE TABLE -->
+          <div class="pt-6 border-t border-slate-200 text-center">
+            <button type="button" id="toggle-price-table" class="inline-flex items-center gap-2 text-xs font-bold text-brand-600 hover:text-brand-800 transition py-2.5 px-4 rounded-xl bg-brand-50/70 hover:bg-brand-100/70 border border-brand-200 shadow-2xs">
+              <span>📊 View official rate matrix and full price list</span>
+              <span class="toggle-arrow transition-transform duration-200">▼</span>
+            </button>
+
+            <div id="full-price-table-container" class="hidden mt-6 text-left space-y-6">
+              <!-- JDG TABLE -->
+              <div class="bg-slate-50 p-4 sm:p-5 rounded-2xl border border-slate-200">
+                <div class="flex items-center justify-between mb-3">
+                  <h4 class="font-bold text-sm text-slate-900">Sole Proprietorship (JDG / Lump Sum / KPiR)</h4>
+                  <span class="text-[10px] bg-brand-100 text-brand-800 font-bold px-2 py-0.5 rounded">Net prices / month</span>
+                </div>
+                <div class="overflow-x-auto">
+                  <table class="price-table text-xs">
+                    <thead>
+                      <tr>
+                        <th>Staff \ Monthly Documents</th>
+                        <th>Up to 5 entries</th>
+                        <th>6 – 30 entries</th>
+                        <th>31 – 60 entries</th>
+                        <th>Over 60 entries</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="font-medium text-slate-800">Owner only (no employees)</td>
+                        <td class="font-bold text-brand-700">from PLN 350</td>
+                        <td class="font-bold text-brand-700">from PLN 400</td>
+                        <td class="font-bold text-brand-700">from PLN 500</td>
+                        <td class="font-bold text-brand-700">from PLN 700</td>
+                      </tr>
+                      <tr>
+                        <td class="font-medium text-slate-800">1 – 3 employees</td>
+                        <td class="font-bold text-brand-700">from PLN 440</td>
+                        <td class="font-bold text-brand-700">from PLN 490</td>
+                        <td class="font-bold text-brand-700">from PLN 590</td>
+                        <td class="font-bold text-brand-700">from PLN 790</td>
+                      </tr>
+                      <tr>
+                        <td class="font-medium text-slate-800">4+ employees</td>
+                        <td class="font-bold text-brand-700">from PLN 710</td>
+                        <td class="font-bold text-brand-700">from PLN 760</td>
+                        <td class="font-bold text-brand-700">from PLN 860</td>
+                        <td class="font-bold text-brand-700">from PLN 1,060</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <!-- SPÓŁKI TABLE -->
+              <div class="bg-slate-50 p-4 sm:p-5 rounded-2xl border border-slate-200">
+                <div class="flex items-center justify-between mb-3">
+                  <h4 class="font-bold text-sm text-slate-900">Companies (Sp. z o.o. / Full Statutory Books)</h4>
+                  <span class="text-[10px] bg-purple-100 text-purple-800 font-bold px-2 py-0.5 rounded">Net prices / month</span>
+                </div>
+                <div class="overflow-x-auto">
+                  <table class="price-table text-xs">
+                    <thead>
+                      <tr>
+                        <th>Staff \ Monthly Documents</th>
+                        <th>Up to 5 entries</th>
+                        <th>6 – 30 entries</th>
+                        <th>31 – 60 entries</th>
+                        <th>Over 60 entries</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="font-medium text-slate-800">Board only (no employees)</td>
+                        <td class="font-bold text-purple-700">from PLN 950</td>
+                        <td class="font-bold text-purple-700">from PLN 1,050</td>
+                        <td class="font-bold text-purple-700">from PLN 1,250</td>
+                        <td class="font-bold text-purple-700">from PLN 1,800</td>
+                      </tr>
+                      <tr>
+                        <td class="font-medium text-slate-800">1 – 3 employees</td>
+                        <td class="font-bold text-purple-700">from PLN 1,050</td>
+                        <td class="font-bold text-purple-700">from PLN 1,150</td>
+                        <td class="font-bold text-purple-700">from PLN 1,350</td>
+                        <td class="font-bold text-purple-700">from PLN 1,900</td>
+                      </tr>
+                      <tr>
+                        <td class="font-medium text-slate-800">4+ employees</td>
+                        <td class="font-bold text-purple-700">from PLN 1,350</td>
+                        <td class="font-bold text-purple-700">from PLN 1,450</td>
+                        <td class="font-bold text-purple-700">from PLN 1,650</td>
+                        <td class="font-bold text-purple-700">from PLN 2,200</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              
+              <p class="text-[11px] text-slate-500 italic text-center">
+                * Initial consultation for newly formed companies: PLN 0. Comprehensive company formation assistance is a paid service.
+              </p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. TESTIMONIALS -->
+  <section class="py-14 sm:py-16 bg-white border-b border-slate-100">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-10 gap-3">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-brand-600">Client Reviews</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-1">What our clients say about us</h2>
+        </div>
+        <a href="opinie.html" class="text-xs font-bold text-brand-600 hover:underline flex items-center gap-1">
+          View all references &amp; Google Reviews →
+        </a>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50 flex flex-col justify-between">
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed italic mb-6">
+            “For years of warm cooperation in managing Poland’s largest research project, working with full responsibility, integrity, kindness, and above all, exceptional professional competence.”
+          </p>
+          <div>
+            <p class="font-bold text-slate-900 text-xs sm:text-sm">Jan Kiciński</p>
+            <p class="text-[11px] text-slate-500">Director of IMP PAN (Polish Academy of Sciences)</p>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50 flex flex-col justify-between">
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed italic mb-6">
+            “I warmly recommend Biuro Rachunkowe Trzebiatowska, which provides accounting and bookkeeping services for us and professionally represents our company before the Polish Tax Office and ZUS.”
+          </p>
+          <div>
+            <p class="font-bold text-slate-900 text-xs sm:text-sm">Arkadiusz Borejszo</p>
+            <p class="text-[11px] text-slate-500">President of the Management Board</p>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50 flex flex-col justify-between">
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed italic mb-6">
+            “Ms. Katarzyna’s work has always been characterized by diligence and absolute commitment to our projects. She consistently demonstrates initiative and innovative solutions. Highly recommended!”
+          </p>
+          <div>
+            <p class="font-bold text-slate-900 text-xs sm:text-sm">Rafał Sosnowski</p>
+            <p class="text-[11px] text-slate-500">President of the Management Board, Sosnowski Sp. k.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. FAQ -->
+  <section class="py-14 sm:py-16 bg-slate-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Frequently Asked Questions (FAQ)</h2>
+        <p class="text-slate-600 text-xs sm:text-sm mt-1.5">Direct answers to the most common questions before starting cooperation.</p>
+      </div>
+
+      <div class="space-y-3">
+        <div class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden shadow-xs">
+          <button class="faq-trigger w-full px-5 py-4 text-left font-bold text-xs sm:text-sm text-slate-900 flex justify-between items-center">
+            <span>How is the office prepared for the mandatory JPK_PD electronic reporting from 2027?</span>
+            <span class="faq-icon text-slate-400 font-bold transition">▼</span>
+          </button>
+          <div class="faq-content hidden px-5 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+            We are 100% prepared for the upcoming JPK_PD statutory reporting (both JPK_CIT for corporations and JPK_PIT for individuals). We operate on certified InsERT enterprise software (Rewizor nexo and Rachmistrz nexo), continuously updated to comply with Polish Ministry of Finance regulations. Our clients do not need to worry about complex chart of accounts mapping or tax tags – we handle the entire process and monthly submissions.
+          </div>
+        </div>
+
+        <div class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden shadow-xs">
+          <button class="faq-trigger w-full px-5 py-4 text-left font-bold text-xs sm:text-sm text-slate-900 flex justify-between items-center">
+            <span>Do I need to visit the office in person with paper invoices?</span>
+            <span class="faq-icon text-slate-400 font-bold transition">▼</span>
+          </button>
+          <div class="faq-content hidden px-5 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+            No! We work 100% digitally. You can submit invoices as PDF files, digital scans, or smartphone photos via our dedicated client portal. Of course, if you enjoy face-to-face meetings, our office in Gdańsk Przymorze is always open to welcome you over a cup of fresh coffee.
+          </div>
+        </div>
+
+        <div class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden shadow-xs">
+          <button class="faq-trigger w-full px-5 py-4 text-left font-bold text-xs sm:text-sm text-slate-900 flex justify-between items-center">
+            <span>How does your office assist with KSeF implementation?</span>
+            <span class="faq-icon text-slate-400 font-bold transition">▼</span>
+          </button>
+          <div class="faq-content hidden px-5 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+            We guide our clients through the entire KSeF adoption: from granting tax office authorizations (ZAW-FA form), selecting appropriate invoicing tools, to verifying structured e-invoices directly within the government platform.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. FOOTER -->
+  <footer class="bg-slate-900 text-slate-400 text-xs pt-12 pb-8 border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+      <div>
+        <div class="bg-white p-3 rounded-2xl inline-block mb-4 shadow-sm">
+          <img src="assets/img/logo-default.png" alt="Biuro Rachunkowe Trzebiatowska" class="h-14 sm:h-16 w-auto object-contain">
+        </div>
+        <p class="text-slate-400 leading-relaxed mb-4 text-[11px]">
+          Professional certified accounting and HR &amp; payroll services in Gdańsk Przymorze, Poland. Ministry of Finance License No. 28310. Insured with Lloyd's.
+        </p>
+        <span class="inline-block bg-slate-800 text-purple-300 font-medium px-2.5 py-1 rounded text-[10px] border border-purple-800/40">
+          ✓ LTCA Academy • InsERT • Certland
+        </span>
+      </div>
+
+      <div>
+        <p class="text-white font-semibold mb-3">Navigation</p>
+        <ul class="space-y-2 text-[11px]">
+          <li><a href="o-biurze.html" class="hover:text-white transition">About Us</a></li>
+          <li><a href="certyfikaty.html" class="hover:text-white transition">Certifications &amp; PI Policy</a></li>
+          <li><a href="jak-pracujemy.html" class="hover:text-white transition">How We Work (Online Flow)</a></li>
+          <li><a href="opinie.html" class="hover:text-white transition">References &amp; Reviews</a></li>
+          <li><a href="kontakt.html" class="hover:text-white transition">Contact &amp; Location</a></li>
+          <li><a href="index.html" class="text-brand-300 hover:text-white transition font-semibold">Polska wersja 🇵🇱</a></li>
+          <li><a href="ua.html" class="text-amber-400 hover:text-amber-300 transition font-semibold">Українська версія 🇺🇦</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-white font-semibold mb-3">Services</p>
+        <ul class="space-y-2 text-[11px]">
+          <li><a href="ksiegowosc-jdg.html" class="hover:text-white transition">Sole Proprietorship (JDG / B2B)</a></li>
+          <li><a href="pelna-ksiegowosc-spolki.html" class="hover:text-white transition">Full Accounting (Sp. z o.o.)</a></li>
+          <li><a href="kadry-i-place.html" class="hover:text-white transition">Payroll &amp; HR Services</a></li>
+          <li><a href="ksef.html" class="text-brand-300 hover:text-white font-semibold transition">KSeF Implementation</a></li>
+          <li><a href="rejestracja-firmy.html" class="hover:text-white transition">Company Registration in Poland</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-white font-semibold mb-3">Contact</p>
+        <ul class="space-y-2 text-[11px]">
+          <li class="text-slate-300">📍 89 Piastowska St., 2nd Floor<br>80-363 Gdańsk Przymorze, Poland</li>
+          <li>📞 <a href="tel:+48503596811" class="text-white font-bold hover:underline">+48 503 59 68 11</a></li>
+          <li>✉ <a href="mailto:kontakt@biurotrzebiatowska.pl" class="hover:text-white">kontakt@biurotrzebiatowska.pl</a></li>
+          <li class="pt-2 text-slate-500">Tax ID (NIP): 584 236 21 95</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-4 pt-6 border-t border-slate-800 text-[11px] flex flex-col sm:flex-row justify-between items-center gap-3 text-slate-500">
+      <p>© 2026 Biuro Rachunkowe Trzebiatowska. All rights reserved.</p>
+      <p>Gdańsk Przymorze • Reliability • Financial Security</p>
+    </div>
+  </footer>
+
+  <!-- MOBILE STICKY BAR -->
+  <div class="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 p-2 flex gap-2 z-50 shadow-lg">
+    <a href="tel:+48503596811" class="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 px-3 rounded-xl text-center text-xs flex items-center justify-center gap-1.5 shadow-sm">
+      📞 Call Now
+    </a>
+    <a href="#wycena" class="flex-1 bg-brand-600 hover:bg-brand-700 text-white font-bold py-2.5 px-3 rounded-xl text-center text-xs flex items-center justify-center gap-1.5 shadow-sm">
+      ☕ Quick Quote
+    </a>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
